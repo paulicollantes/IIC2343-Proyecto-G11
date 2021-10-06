@@ -1,0 +1,35 @@
+// Rutina de multiplicacion rusa (basada en la ayudantia 1)
+// En breve, la idea es chequear si el primer operando es impar, si es impar, al resultado final se le suma el segundo operando, luego multiplicar el segundo operando por 2, dividir el primer operando por 2 y repetir
+DATA:
+mult_a         0
+mult_b        0
+mult_r         0
+
+CODE:
+MOV A, LIT             // Setea A
+MOV B, LIT            // Setea B
+MOV (mult_a), A         // Mueve el valor del registro A (primer operando) a la variable en memoria mult_a
+MOV (mult_b), B        // “”
+MOV B, 0            // B = 0
+MOV (mult_r), B        // Mueve el valor del registro B a la variable en memoria mult_r, que corresponde al primer resultado parcial (X*0=0)
+
+mult_loop:             // Label para poder hacer jumps y ejecutar la suma varias veces
+MOV A, (mult_a)         // Mueve el valor de la variable en memoria mult_a al registro A
+CMP A,0             // Caso Base: Compara A con cero. Con todos los SHR, en algun momento A llega a 0
+JEQ mult_end             // Si A es cero, salta a mult_end (termina el loop)
+AND A,1            // Si A es par, A=0. Si A es impar, A=1
+CMP A,0            // Compara A (ahora booleano si primer operando es impar) con cero
+JEQ no_sum             // Si A es cero, salta a no_sum. Solamente pasa cuando el valor actual del primer operando es par
+MOV A, (mult_r)        // Mueve el valor de la variable en memoria mult_r al registro A
+MOV B, (mult_b)        // Mueve el valor de la variable en memoria mult_b al registro B
+ADD (mult_r)             // Mueve a la variable en memoria mult_r la suma entre A y B
+
+no_sum:            // Label para el jump y, asi, evitar sumar cuando el primer operando es par
+MOV A, (mult_a)        // Mueve el valor de la variable en memoria mult_a al registro A
+SHR (mult_a)            // Mueve a la variable en memoria mult_a el valor de lo que hay en el registro A dividido en 2 (‘0’&mult_a[:-1])
+MOV A, (mult_b)        // Mueve el valor de la memoria mult_b al registro A
+SHL (mult_b)            // Mueve a la variable en memoria mult_b el valor de lo que hay en el registro A multiplicado por 2
+JMP mult_loop             // Volvemos al label mult_loop para seguir en el loop
+
+mult_end:            // Label para el jump y terminar la multiplicación
+MOV A, (mult_r)        // Mueve el valor de la variable en memoria mult_r al registro A
