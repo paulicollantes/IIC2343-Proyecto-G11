@@ -1,0 +1,8 @@
+
+
+- Splitear comentarios (s.split('//'))
+- Stripear espacios exteriores e interiores duplicados (s.strip() & ' '.join(s.strip())
+- Desempaquetar los elementos (instruccion, argumentos = s.split())
+- Traducir instruccion con diccionario de opcodes
+- Tomar argumentos y llevarlos a binario
+- Juntar todo y dejarlo como array de bytes 
