@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 
@@ -67,17 +68,15 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 3
-  set_param synth.incrementalSynthesisCache {C:/Users/felip/Desktop/Grupo 11/Proyecto Base/.Xil/Vivado-16428-DESKTOP-OHUA18E/incrSyn}
-  set_param xicom.use_bs_reader 1
+  set_param chipscope.maxJobs 2
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {C:/Users/felip/Desktop/Grupo 11/Proyecto Base/Proyecto Base.cache/wt} [current_project]
-  set_property parent.project_path {C:/Users/felip/Desktop/Grupo 11/Proyecto Base/Proyecto Base.xpr} [current_project]
+  set_property webtalk.parent_dir {C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.xpr} [current_project]
   set_property ip_cache_permissions disable [current_project]
-  add_files -quiet {{C:/Users/felip/Desktop/Grupo 11/Proyecto Base/Proyecto Base.runs/synth_1/Basys3.dcp}}
-  read_xdc {{C:/Users/felip/Desktop/Grupo 11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc}}
+  add_files -quiet {{C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.runs/synth_1/Basys3.dcp}}
+  read_xdc {{C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc}}
   link_design -top Basys3 -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

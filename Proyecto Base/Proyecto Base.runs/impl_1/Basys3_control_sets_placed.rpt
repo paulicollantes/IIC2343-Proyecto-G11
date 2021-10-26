@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Tue Oct  5 15:48:41 2021
-| Host         : DESKTOP-OHUA18E running 64-bit major release  (build 9200)
+| Date         : Mon Oct 25 20:59:29 2021
+| Host         : PC-CASA running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Basys3_control_sets_placed.rpt
 | Design       : Basys3
 | Device       : xc7a35t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    48 |
-|    Minimum number of control sets                        |    48 |
+| Total control sets                                       |     2 |
+|    Minimum number of control sets                        |     2 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    43 |
+| Unused register locations in slices containing registers |    13 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    48 |
+| Total control sets |     2 |
 | >= 0 to < 4        |     1 |
-| >= 4 to < 6        |     2 |
-| >= 6 to < 8        |     1 |
-| >= 8 to < 10       |     5 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
-| >= 12 to < 14      |     1 |
+| >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    38 |
+| >= 16              |     1 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,69 +58,23 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              23 |           11 |
+| No           | No                    | No                     |               2 |            1 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              57 |           16 |
-| Yes          | No                    | No                     |              72 |           42 |
+| No           | Yes                   | No                     |              17 |            5 |
+| Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              45 |           12 |
+| Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------+------------------------------------------------+---------------------------------------------------------+------------------+----------------+
-|      Clock Signal     |                  Enable Signal                 |                     Set/Reset Signal                    | Slice Load Count | Bel Load Count |
-+-----------------------+------------------------------------------------+---------------------------------------------------------+------------------+----------------+
-|  clock_BUFG           |                                                |                                                         |                1 |              1 |
-|  rx_state_reg[enable] | inst_Programmer/memory[3]_3                    |                                                         |                2 |              4 |
-|  clk_IBUF_BUFG        | inst_Programmer/inst_UART/sample               | inst_Programmer/inst_UART/rx_state[bits][7]_i_1_n_0     |                1 |              4 |
-|  rx_state_reg[enable] |                                                |                                                         |                3 |              6 |
-|  rx_state_reg[enable] | inst_Programmer/memory[1]_2                    |                                                         |                6 |              8 |
-|  rx_state_reg[enable] | inst_Programmer/memory[0]_0                    |                                                         |                4 |              8 |
-|  rx_state_reg[enable] | inst_Programmer/memory[5]_5                    |                                                         |                4 |              8 |
-|  rx_state_reg[enable] | inst_Programmer/memory[2]_4                    |                                                         |                5 |              8 |
-|  clk_IBUF_BUFG        | inst_Programmer/inst_UART/rx_state_next[nbits] | inst_Programmer/inst_UART/rx_state[bits][7]_i_1_n_0     |                3 |              9 |
-|  clock_BUFG           |                                                | inst_Programmer/bussy                                   |                4 |             13 |
-|  clock_BUFG           | inst_ROM/enableA                               | inst_Programmer/bussy                                   |                4 |             16 |
-|  clock_BUFG           | inst_ROM/bussy_reg_13                          | inst_Programmer/bussy                                   |                4 |             16 |
-|  clk_IBUF_BUFG        |                                                |                                                         |                7 |             16 |
-|  clk_IBUF_BUFG        |                                                | inst_Display_Controller/clock_divide_counter[0]_i_1_n_0 |                5 |             17 |
-|  clk_IBUF_BUFG        |                                                | inst_Clock_Divider/clear                                |                7 |             27 |
-|  rx_state_reg[enable] | inst_Programmer/inst_UART/E[0]                 |                                                         |               21 |             36 |
-|  clock_BUFG           | inst_ROM/bussy_reg_29                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_27                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_25                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_15                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_17                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_19                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_21                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_23                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_14                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_26                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_28                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_22                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_18                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_16                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_20                          |                                                         |               16 |             64 |
-|  clock_BUFG           | inst_ROM/bussy_reg_24                          |                                                         |               16 |             64 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_8                    |                                                         |               24 |             96 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_11                   |                                                         |               24 |             96 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_2                    |                                                         |               24 |             96 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_9                    |                                                         |               24 |             96 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_12                   |                                                         |               24 |             96 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_10                   |                                                         |               24 |             96 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_0                    |                                                         |               24 |             96 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_14                   |                                                         |               24 |             96 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_4                    |                                                         |               24 |             96 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_7                    |                                                         |               24 |             96 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_1                    |                                                         |               24 |             96 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_13                   |                                                         |               24 |             96 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_15                   |                                                         |               24 |             96 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_6                    |                                                         |               24 |             96 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_5                    |                                                         |               24 |             96 |
-|  clk_IBUF_BUFG        | inst_Programmer/ready_reg_3                    |                                                         |               24 |             96 |
-+-----------------------+------------------------------------------------+---------------------------------------------------------+------------------+----------------+
++----------------+---------------+---------------------------------------------------------+------------------+----------------+
+|  Clock Signal  | Enable Signal |                     Set/Reset Signal                    | Slice Load Count | Bel Load Count |
++----------------+---------------+---------------------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG |               |                                                         |                1 |              2 |
+|  clk_IBUF_BUFG |               | inst_Display_Controller/clock_divide_counter[0]_i_1_n_0 |                5 |             17 |
++----------------+---------------+---------------------------------------------------------+------------------+----------------+
 
 

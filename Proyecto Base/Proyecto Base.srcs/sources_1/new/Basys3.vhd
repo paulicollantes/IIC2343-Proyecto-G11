@@ -188,44 +188,6 @@ signal ram_dataout      : std_logic_vector(15 downto 0); -- Señales de la palabr
 
 -- señales propias 
 
-signal alu_result       : std_logic_vector(15 downto 0);
-signal a_reg_out        : std_logic_vector(15 downto 0);
-
-signal b_reg_out        : std_logic_vector(15 downto 0);
-
-signal alu_z            : std_logic;
-signal alu_n            : std_logic;
-signal alu_c            : std_logic;
-
-signal mux_a_out        : std_logic_vector(15 downto 0);
-signal mux_b_out        : std_logic_vector(15 downto 0);
-
-signal selA             : std_logic_vector(1 downto 0);
-signal selB             : std_logic_vector(1 downto 0);
-signal selALU           : std_logic_vector(2 downto 0);
-signal w                : std_logic;
-signal enableA          : std_logic;
-signal enableB          : std_logic;
-
-signal loadPC           : std_logic;
-
-signal c_z_n            : std_Logic_vector(2 downto 0);
-
-signal countpc_dataout  : std_logic_vector(11 downto 0);
-
-signal pc_rom_address   : std_logic_vector(11 downto 0);
-
-signal cpu_rom_dataout  : std_logic_vector(35 downto 0);
-
-signal cu_datain        : std_logic_vector(19 downto 0);
-signal cu_status_in     : std_logic_vector(2 downto 0);
-
-signal lit_datain       : std_logic_vector(15 downto 0);
-signal ins_datain       : std_logic_vector(11 downto 0);
-
-signal cpu_ram_dataout  : std_logic_vector(15 downto 0);
-
-signal ram_write        : std_logic;
 
 
 -- Fin de la declaración de los señales.
@@ -242,142 +204,24 @@ with clear select
     rom_address <= cpu_rom_address when '0',
                    pro_address when '1';
                    
--- MuxA
 
-with selA select
-    mux_a_out <= "0000000000000000" when "00",
-                 "0000000000000001" when "11",
-                 a_reg_out when "01",
-                 "0000000000000000" when others;
-                 
--- MuxB
-
-with selB select
-    mux_b_out <= "0000000000000000" when "00",
-                 b_reg_out when "01",
-                 ram_dataout when "10",
-                 lit_datain when "11";
                  
 -- Inicio de declaración de instancias.
 
 -- Instancia de la CPU.        
--- inst_CPU: CPU port map(
---     clock       => clock,
---     clear       => clear,
---     ram_address => ins_datain,
---     ram_datain  => alu_result,
---     ram_dataout => ram_dataout,
---     ram_write   => write_ram,
---     rom_address => cpu_rom_address,
---     rom_dataout => rom_dataout,
---     dis         => dis
---     );
-
-ram_address <= ins_datain;
-ram_datain  <= alu_result;
--- ram_dataout <= ram_dataout;           -- Innecesario
-ram_write   <= write_ram;
--- rom_address <= cpu_rom_address;       -- ERROR - Se salta el muxer
-rom_dataout <= rom_dataout;
---dis         <= dis;                    --CON ESTO DA MENOS ERRORES
-        
-cpu_ram_dataout <= ram_dataout;
-cpu_rom_dataout <= rom_dataout;
+ inst_CPU: CPU port map(
+     clock       => clock,
+     clear       => clear,
+     ram_address => ram_address,
+     ram_datain  => ram_datain,
+     ram_dataout => ram_dataout,
+     ram_write   => write_ram,
+     rom_address => cpu_rom_address,
+     rom_dataout => rom_dataout,
+     dis         => dis
+     );
 
 
---dis(15 downto 8) <= a_reg_out(7 downto 0);
-dis(15 downto 8) <= mux_a_out(7 downto 0);
---dis(7 downto 1) <= b_reg_out(6 downto 0);
---dis(7 downto 0) <= mux_b_out(7 downto 0);
---dis(15 downto 8) <= rom_dataout(27 downto 20);
-dis(7 downto 0) <= rom_dataout(7 downto 0);
---dis(0) <= clock;
-
-    
--- Instancia Control Unit
-
-cu_datain <= cpu_rom_dataout(19 downto 0);
-lit_datain <= cpu_rom_dataout(35 downto 20);
-ins_datain <= cpu_rom_dataout(35 downto 24);
-
-inst_ControlUnit: Control_Unit port map(
-   cu_in => cu_datain,
-   cu_status_in => cu_status_in,
-   enableA => enableA,
-   enableB => enableB,
-   selA => selA,
-   selB => selB,
-   loadPC => loadPC,
-   selALU => selALU,
-   w => w
-);
-
-write_ram <= w;
-
-
--- Instancias de RegA y RegB.
-
-inst_RegA: Reg port map(
-   clock    => clock,                        -- Señal del clock (reducido).
-   clear    => clear,                        -- Señal de reset.
-   load     => enableA,                        -- Señal de carga.
-   up       => '0',                        -- Señal de subida.
-   down     => '0',                        -- Señal de bajada.
-   datain   => alu_result,   -- Señales de entrada de datos.
-   dataout  => a_reg_out
-);
-
-inst_RegB: Reg port map(
-   clock    => clock,                        -- Señal del clock (reducido).
-   clear    => clear,                        -- Señal de reset.
-   load     => enableB,                        -- Señal de carga.
-   up       => '0',                        -- Señal de subida.
-   down     => '0',                       -- Señal de bajada.
-   datain   => alu_result,   -- Señales de entrada de datos.
-   dataout  => b_reg_out
-);
-
--- Count PC
-inst_CountPC: CountPC port map(
-   clock    => clock,                        -- Señal del clock (reducido).
-   clear    => clear,                        -- Señal de reset.
-   load     => loadPC,                        -- Señal de carga.
-   up       => '1',                        -- Señal de subida.
-   down     => '0',                       -- Señal de bajada.
-   datain   => ins_datain,   -- Señales de entrada de datos.
-   dataout  => pc_rom_address
-);
-
-cpu_rom_address <= pc_rom_address;
-
--- Status
-
-c_z_n(2) <= alu_c;
-c_z_n(1) <= alu_z;
-c_z_n(0) <= alu_n;
- 
-inst_Status: Status port map(
-   clock    => clock,                        -- Señal del clock (reducido).
-   clear    => clear,                        -- Señal de reset.
-   load     => '1',                        -- Señal de carga.
-   up       => '0',                        -- Señal de subida.
-   down     => '0',                       -- Señal de bajada.
-   datain   => c_z_n,   -- Señales de entrada de datos.
-   dataout  => cu_status_in
-);
-
-
--- ALU
-
-inst_ALU: ALU port map(
-           a        => mux_a_out,  -- Primer operando.
-           b        => mux_b_out,  -- Segundo operando.
-           sop      => selALU,   -- Selector de la operación.
-           c        => alu_c,                       -- Señal de 'carry'.
-           z        => alu_z,                       -- Señal de 'zero'.
-           n        => alu_n,                       -- Señal de 'nagative'.
-           result   => alu_result
-);
 -- Instancia de la memoria ROM.
 inst_ROM: ROM port map(
     clk         => clk,
