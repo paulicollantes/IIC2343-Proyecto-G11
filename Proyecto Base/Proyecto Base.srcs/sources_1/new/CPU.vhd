@@ -102,7 +102,6 @@ signal mux_b_out        : std_logic_vector(15 downto 0);
 signal selA             : std_logic_vector(1 downto 0);
 signal selB             : std_logic_vector(1 downto 0);
 signal selALU           : std_logic_vector(2 downto 0);
-signal w                : std_logic;
 signal enableA          : std_logic;
 signal enableB          : std_logic;
 
@@ -111,8 +110,6 @@ signal loadPC           : std_logic;
 signal c_z_n            : std_Logic_vector(2 downto 0);
 
 signal countpc_dataout  : std_logic_vector(11 downto 0);
-
-signal pc_rom_address   : std_logic_vector(11 downto 0);
 
 
 signal cu_datain        : std_logic_vector(19 downto 0);
@@ -159,7 +156,7 @@ inst_ControlUnit: Control_Unit port map(
    selB => selB,
    loadPC => loadPC,
    selALU => selALU,
-   w => w
+   w => ram_write
 );
 
 -- Instancias de RegA y RegB.
@@ -222,6 +219,11 @@ inst_ALU: ALU port map(
            n        => alu_n,                       -- Señal de 'nagative'.
            result   => alu_result
 );
+
+-- Display
+
+dis(15 downto 8) <= a_reg_out(7 downto 0);
+dis(7 downto 0) <= ins_datain(7 downto 0);
 
 
 end Behavioral;
