@@ -223,7 +223,7 @@ inst_ALU: ALU port map(
 -- Display
 
 dis(15 downto 8) <= a_reg_out(7 downto 0);
-dis(7 downto 0) <= ins_datain(7 downto 0);
+dis(7 downto 0) <= b_reg_out(7 downto 0);
 
 
 end Behavioral;
