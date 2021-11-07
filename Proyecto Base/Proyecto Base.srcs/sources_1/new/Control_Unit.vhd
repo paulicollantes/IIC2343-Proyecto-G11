@@ -40,7 +40,12 @@ entity Control_Unit is
            selB : out STD_LOGIC_VECTOR (1 downto 0);
            loadPC : out STD_LOGIC;
            selALU : out STD_LOGIC_VECTOR (2 downto 0);
-           w : out STD_LOGIC);
+           w : out STD_LOGIC;
+           selAdd : out STD_LOGIC_VECTOR(1 downto 0);
+           incSP  : out STD_LOGIC;
+           decSP  : out STD_LOGIC;
+           selPC  : out STD_LOGIC;
+           selDIn : out STD_LOGIC);
 end Control_Unit;
 
 architecture Behavioral of Control_Unit is
@@ -60,6 +65,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
     when "0000001" =>
       enableA <= '0';
       enableB <= '1';
@@ -68,6 +79,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
     when "0000010" =>
       enableA <= '1';
       enableB <= '0';
@@ -76,6 +93,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
     when "0000011" =>
       enableA <= '0';
       enableB <= '1';
@@ -84,6 +107,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
     when "0000100" =>
       enableA <= '1';
       enableB <= '0';
@@ -92,6 +121,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
     when "0000101" =>
       enableA <= '0';
       enableB <= '1';
@@ -100,6 +135,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
     when "0000110" =>
       enableA <= '0';
       enableB <= '0';
@@ -108,6 +149,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '1';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0000111" =>
       enableA <= '0';
       enableB <= '0';
@@ -116,6 +163,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '1';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
       
      -- ADD
      
@@ -127,6 +180,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0001001" =>
       enableA <= '0';
       enableB <= '1';
@@ -135,6 +194,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0001010" =>
       enableA <= '1';
       enableB <= '0';
@@ -143,6 +208,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '1';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0001011" =>
       enableA <= '0';
       enableB <= '1';
@@ -151,6 +222,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0001100" =>
       enableA <= '1';
       enableB <= '0';
@@ -159,6 +236,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0001101" =>
       enableA <= '0';
       enableB <= '1';
@@ -167,6 +250,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
       
      when "0001110" =>
       enableA <= '0';
@@ -176,6 +265,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '1';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
       
      -- SUB
      
@@ -187,6 +282,12 @@ begin
       selALU <= "001";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0010000" =>
       enableA <= '0';
       enableB <= '1';
@@ -195,6 +296,12 @@ begin
       selALU <= "001";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0010001" =>
       enableA <= '1';
       enableB <= '0';
@@ -203,6 +310,12 @@ begin
       selALU <= "001";
       loadPC <= '0';
       w <= '1';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0010010" =>
       enableA <= '0';
       enableB <= '1';
@@ -211,6 +324,12 @@ begin
       selALU <= "001";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0010011" =>
       enableA <= '1';
       enableB <= '0';
@@ -219,6 +338,12 @@ begin
       selALU <= "001";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0010100" =>
       enableA <= '0';
       enableB <= '1';
@@ -227,6 +352,12 @@ begin
       selALU <= "001";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
       
      when "0010101" =>
       enableA <= '0';
@@ -236,9 +367,15 @@ begin
       selALU <= "001";
       loadPC <= '0';
       w <= '1';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
       
      -- AND
-  when "0010110" =>
+     when "0010110" =>
       enableA <= '1';
       enableB <= '0';
       selA <= "01";
@@ -246,6 +383,12 @@ begin
       selALU <= "010";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "00010111" =>
       enableA <= '0';
       enableB <= '1';
@@ -254,6 +397,12 @@ begin
       selALU <= "010";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0011000" =>
       enableA <= '1';
       enableB <= '0';
@@ -262,6 +411,12 @@ begin
       selALU <= "010";
       loadPC <= '0';
       w <= '1';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0011001" =>
       enableA <= '0';
       enableB <= '1';
@@ -270,6 +425,12 @@ begin
       selALU <= "010";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0011010" =>
       enableA <= '1';
       enableB <= '0';
@@ -278,6 +439,12 @@ begin
       selALU <= "010";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0011011" =>
       enableA <= '0';
       enableB <= '1';
@@ -286,6 +453,11 @@ begin
       selALU <= "010";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
       
      when "0011100" =>
       enableA <= '0';
@@ -295,6 +467,12 @@ begin
       selALU <= "010";
       loadPC <= '0';
       w <= '1';  
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
    -- OR
     when "0011101" =>
       enableA <= '1';
@@ -304,6 +482,12 @@ begin
       selALU <= "011";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0011110" =>
       enableA <= '0';
       enableB <= '1';
@@ -312,6 +496,12 @@ begin
       selALU <= "011";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0011111" =>
       enableA <= '1';
       enableB <= '0';
@@ -320,6 +510,12 @@ begin
       selALU <= "011";
       loadPC <= '0';
       w <= '1';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0100000" =>
       enableA <= '0';
       enableB <= '1';
@@ -328,6 +524,12 @@ begin
       selALU <= "011";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0100001" =>
       enableA <= '1';
       enableB <= '0';
@@ -336,6 +538,12 @@ begin
       selALU <= "011";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0100010" =>
       enableA <= '0';
       enableB <= '1';
@@ -344,6 +552,12 @@ begin
       selALU <= "011";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
       
      when "0100011" =>
       enableA <= '0';
@@ -353,6 +567,11 @@ begin
       selALU <= "011";
       loadPC <= '0';
       w <= '1'; 
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
 
 --  XOR
 
@@ -364,6 +583,12 @@ begin
       selALU <= "100";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0100101" =>
       enableA <= '0';
       enableB <= '1';
@@ -372,6 +597,12 @@ begin
       selALU <= "100";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0100110" =>
       enableA <= '1';
       enableB <= '0';
@@ -380,6 +611,12 @@ begin
       selALU <= "100";
       loadPC <= '0';
       w <= '1';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0100111" =>
       enableA <= '0';
       enableB <= '1';
@@ -388,6 +625,12 @@ begin
       selALU <= "100";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0101000" =>
       enableA <= '1';
       enableB <= '0';
@@ -396,6 +639,12 @@ begin
       selALU <= "100";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0101001" =>
       enableA <= '0';
       enableB <= '1';
@@ -404,6 +653,11 @@ begin
       selALU <= "100";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
       
      when "0101010" =>
       enableA <= '0';
@@ -413,6 +667,11 @@ begin
       selALU <= "100";
       loadPC <= '0';
       w <= '1';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
       
     -- NOT
      when "0101011" =>
@@ -423,6 +682,12 @@ begin
       selALU <= "101";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0101100" =>
       enableA <= '0';
       enableB <= '1';
@@ -431,6 +696,12 @@ begin
       selALU <= "101";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0101101" =>
       enableA <= '0';
       enableB <= '0';
@@ -439,6 +710,12 @@ begin
       selALU <= "101";
       loadPC <= '0';
       w <= '1';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
     -- SHL
      when "0101110" =>
       enableA <= '1';
@@ -448,6 +725,12 @@ begin
       selALU <= "111";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0101111" =>
       enableA <= '0';
       enableB <= '1';
@@ -456,6 +739,12 @@ begin
       selALU <= "111";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0110000" =>
       enableA <= '0';
       enableB <= '0';
@@ -464,6 +753,12 @@ begin
       selALU <= "111";
       loadPC <= '0';
       w <= '1';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      -- SHR
      when "0110001" =>
       enableA <= '1';
@@ -473,6 +768,12 @@ begin
       selALU <= "110";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0110010" =>
       enableA <= '0';
       enableB <= '1';
@@ -481,6 +782,12 @@ begin
       selALU <= "110";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0110011" =>
       enableA <= '0';
       enableB <= '0';
@@ -489,6 +796,12 @@ begin
       selALU <= "110";
       loadPC <= '0';
       w <= '1';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
     -- INC
      when "0110100" =>
       enableA <= '1';
@@ -498,6 +811,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0110101" =>
       enableA <= '0';
       enableB <= '1';
@@ -506,6 +825,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0110110" =>
       enableA <= '0';
       enableB <= '0';
@@ -514,6 +839,12 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '1';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
     -- DEC
      when "0110111" =>
       enableA <= '1';
@@ -523,6 +854,11 @@ begin
       selALU <= "001";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
       
      -- CMP
      when "0111000" =>
@@ -533,6 +869,12 @@ begin
       selALU <= "001";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0111001" =>
       enableA <= '0';
       enableB <= '1';
@@ -541,6 +883,12 @@ begin
       selALU <= "001";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
      when "0111010" =>
       enableA <= '0';
       enableB <= '0';
@@ -549,6 +897,12 @@ begin
       selALU <= "001";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
       
     -- JMP
     
@@ -560,6 +914,12 @@ begin
       selALU <= "001";
       loadPC <= '1';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
+      
     -- JEQ
     
      when "0111100" =>
@@ -572,6 +932,12 @@ begin
           selALU <= "001";
           loadPC <= '1';
           w <= '0';
+          selAdd <= "00";
+          incSP  <= '0';
+          decSP  <= '0';
+          selPC  <= '0';
+          selDIn <= '0';
+          
        when others =>
           enableA <= '1';
           enableB <= '0';
@@ -580,6 +946,11 @@ begin
           selALU <= "000";
           loadPC <= '0';
           w <= '0';
+          selAdd <= "00";
+          incSP  <= '0';
+          decSP  <= '0';
+          selPC  <= '0';
+          selDIn <= '0';
       end case;
       
     -- JNE
@@ -593,6 +964,12 @@ begin
               selALU <= "001";
               loadPC <= '1';
               w <= '0';
+              selAdd <= "00";
+              incSP  <= '0';
+              decSP  <= '0';
+              selPC  <= '0';
+              selDIn <= '0';
+              
          when others =>
               enableA <= '1';
               enableB <= '0';
@@ -601,6 +978,11 @@ begin
               selALU <= "000";
               loadPC <= '0';
               w <= '0';
+              selAdd <= "00";
+              incSP  <= '0';
+              decSP  <= '0';
+              selPC  <= '0';
+              selDIn <= '0';
      end case;
     -- NOP 
      when "0111110" =>
@@ -611,6 +993,11 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
      
      when others => -- Nunca debería dar esta opción. Hace lo mismo que NOP
       enableA <= '1';
@@ -620,6 +1007,11 @@ begin
       selALU <= "000";
       loadPC <= '0';
       w <= '0';
+      selAdd <= "00";
+      incSP  <= '0';
+      decSP  <= '0';
+      selPC  <= '0';
+      selDIn <= '0';
   end case;
 end process;
 

@@ -32,7 +32,12 @@ architecture Behavioral of CPU is
            selB : out STD_LOGIC_VECTOR (1 downto 0);
            loadPC : out STD_LOGIC;
            selALU : out STD_LOGIC_VECTOR (2 downto 0);
-           w : out STD_LOGIC);
+           w : out STD_LOGIC;
+           selAdd : out STD_LOGIC_VECTOR(1 downto 0);
+           incSP  : out STD_LOGIC;
+           decSP  : out STD_LOGIC;
+           selPC  : out STD_LOGIC;
+           selDIn : out STD_LOGIC);
 end component;
    
  -- Definición de Reg
@@ -83,6 +88,27 @@ component ALU is
            n        : out std_logic;                       -- Señal de 'nagative'.
            result   : out std_logic_vector (15 downto 0)); -- Resultado de la operación.
 end component;
+
+-- Definición de Adder
+
+component Adder16 is
+    Port ( a  : in  std_logic_vector (15 downto 0);
+           b  : in  std_logic_vector (15 downto 0);
+           ci : in  std_logic;
+           s  : out std_logic_vector (15 downto 0);
+           co : out std_logic);
+end component;
+
+-- Definición de SP
+
+component SP is
+    Port ( incSP : in STD_LOGIC;
+           decSP : in STD_LOGIC;
+           clear : in STD_LOGIC;
+           SP_out : out STD_LOGIC_VECTOR (11 downto 0));
+end component;
+
+
 -- Fin de la declaración de los componentes.
 
 -- Inicio de la declaración de señales.
@@ -118,6 +144,23 @@ signal cu_status_in     : std_logic_vector(2 downto 0);
 signal lit_datain       : std_logic_vector(15 downto 0);
 signal ins_datain       : std_logic_vector(11 downto 0);
 
+signal countPC_out      : std_logic_vector(11 downto 0);
+signal countPC_in    : std_logic_vector(11 downto 0);
+
+signal adder_out        : std_logic_vector(15 downto 0);
+signal adder_co         : std_logic;
+
+
+signal selAdd        : std_logic_vector(1 downto 0);
+signal incSP         : std_logic;
+signal decSP         : std_logic;
+signal selPC         : std_logic;
+signal selDIn        : std_logic;
+
+signal SP_out        : std_logic_vector(11 downto 0);
+
+signal adder_modifier : std_logic_vector(15 downto 0);
+
 
 
 begin
@@ -138,14 +181,30 @@ with selB select
                  ram_dataout when "10",
                  lit_datain when "11";
                  
-ram_address <= ins_datain;
-ram_datain  <= alu_result;
+                 
+-- Mux PC
+
+with selPC select
+    countPC_in <= ins_datain when '0',
+                   ram_dataout(11 downto 0) when '1';
+
+-- Mux datain
+
+with selDIn select
+    ram_datain <= alu_result when '0',
+                   adder_out when '1';
+
+-- Mux S
+with selAdd select
+    ram_address <= ins_datain when "00",
+                 b_reg_out(11 downto 0) when "01",
+                 SP_out when others;
                  
 -- Instancia Control Unit
 
 cu_datain <= rom_dataout(19 downto 0);
 lit_datain <= rom_dataout(35 downto 20);
-ins_datain <= rom_dataout(35 downto 24);
+ins_datain <= rom_dataout(31 downto 20);
 
 inst_ControlUnit: Control_Unit port map(
    cu_in => cu_datain,
@@ -156,7 +215,12 @@ inst_ControlUnit: Control_Unit port map(
    selB => selB,
    loadPC => loadPC,
    selALU => selALU,
-   w => ram_write
+   w => ram_write,
+   selAdd => selAdd,
+   incSP  => incSP,
+   decSP  => decSP,
+   selPC  => selPC,
+   selDIn => selDIn
 );
 
 -- Instancias de RegA y RegB.
@@ -181,6 +245,18 @@ inst_RegB: Reg port map(
    dataout  => b_reg_out
 );
 
+-- Adder
+
+adder_modifier <= "0000000000000000";
+adder_modifier(11 downto 0) <= countPC_out; 
+
+inst_Adder: Adder16 port map(
+   a    => "0000111111111111",                        -- Señal del clock (reducido).
+   b    => adder_modifier,                        -- Señal de reset.
+   ci   => '0',                        -- Señal de carga.
+   s    => adder_out,                        -- Señal de subida.
+   co   => adder_co                     -- Señal de bajada.
+   );
 -- Count PC
 inst_CountPC: CountPC port map(
    clock    => clock,                        -- Señal del clock (reducido).
@@ -188,10 +264,18 @@ inst_CountPC: CountPC port map(
    load     => loadPC,                        -- Señal de carga.
    up       => '1',                        -- Señal de subida.
    down     => '0',                       -- Señal de bajada.
-   datain   => ins_datain,   -- Señales de entrada de datos.
-   dataout  => rom_address
+   datain   => countPC_in,   -- Señales de entrada de datos.
+   dataout  => countPC_out
 );
 
+-- SP
+
+inst_SP: SP port map(
+   incSP    => incSP,                        -- Señal del clock (reducido).
+   decSP    => decSP,                        -- Señal de reset.
+   clear   => clear,                        -- Señal de carga.
+   SP_out    => SP_out                        -- Señal de subida.                   -- Señal de bajada.
+   );
 -- Status
 
 c_z_n(2) <= alu_c;
