@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1633459595">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1635378923">
   <File Type="BITSTR-BMM" Name="Basys3_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Basys3_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Basys3_timing_summary_init.rpt"/>
@@ -89,6 +89,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/CPU.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/Clock_Divider.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -169,13 +175,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Basys3.vhd">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/CPU.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
