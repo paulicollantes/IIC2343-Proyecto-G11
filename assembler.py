@@ -147,6 +147,7 @@ class Assembler:
                     var = line.split("//")
                     for l in var:
                         l.strip()
+                    # REVISAR - Como maneja los arrays
                     if var[0] != "":
                         var[0].strip(" ")
                         variable = var[0].split(" ")
@@ -171,7 +172,7 @@ class Assembler:
                         for l in codeline:
                             l.strip()
                         if codeline[0] != "":
-                            self.code.append(codeline[0].strip("\n"))
+                            self.code.append(codeline[0].strip("\n")) # REVISAR - No faltaría este strip arriba? (save_vars)
                     #print(self.code)
         
     def save_labels(self):
@@ -266,11 +267,11 @@ class Assembler:
         return (tipo, valor)
 
     def formatter(self, literal=''):
-        if not literal:
+        if not literal: # when empty ''
             literal = 0
-        elif isinstance(literal, int):
+        elif isinstance(literal, int): # when it's already number
             pass
-        elif literal[-1] == 'd' or literal[-1] not in ['b', 'd', 'h']:
+        elif literal[-1] == 'd' or literal[-1] not in ['b', 'd', 'h']: # when it's a string number
             literal = int(literal.replace('d',''))
         elif literal[-1] == 'b': 
             literal = int('0b'+literal.replace('b', ''),2)
@@ -292,15 +293,20 @@ class Assembler:
             mostSignificatives = self.formatter(elemento2)
         else:
             mostSignificatives = self.formatter('')
-        
-        return mostSignificatives + emptyBits + opcode
+        bytesArray = [mostSignificatives + emptyBits + opcode]
+        """
+        Aquí añadir el manejo de casos de instrucciones de 2 ciclos.
+        Su when instruction case 'xxx' ... case 'yyy' ... y así, para
+            luego appendear esas líneas extras a bytesArray
 
-    def intructionsToBytes (self, instructions):
-        byteArray = []
+        """
+        return bytearray
+
+    def instructionsToBytes (self, instructions):
+        bytesArray = []
         for line in instructions:
-            byteline = self.getByteArray(*line)
-            byteArray.append(byteline)
-        return byteArray
+            bytesArray += self.getByteArray(*line)
+        return bytesArray
         
 
 
@@ -321,7 +327,7 @@ instructions = assembler.separate()
 #    print(l)
 
 
-instInBytes = assembler.intructionsToBytes(instructions)
+instInBytes = assembler.instructionsToBytes(instructions)
 rom_programmer = Basys3()
 rom_programmer.begin()
 for line in instInBytes:

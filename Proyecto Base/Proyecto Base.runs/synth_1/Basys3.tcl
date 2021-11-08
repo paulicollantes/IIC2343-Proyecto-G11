@@ -17,7 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
+set_param chipscope.maxJobs 2
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -43,6 +43,7 @@ read_vhdl -library xil_defaultlib {
   {C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd}
   {C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd}
   {C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd}
+  {C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/SP.vhd}
   {C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Status.vhd}
   {C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd}
   {C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd}
