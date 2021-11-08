@@ -165,16 +165,14 @@ signal adder_modifier : std_logic_vector(15 downto 0);
 
 begin
 
--- MuxA
-
+-- MuxA -------------------------------------------------------------------
 with selA select
     mux_a_out <= "0000000000000000" when "00",
                  "0000000000000001" when "11",
                  a_reg_out when "01",
                  "0000000000000000" when others;
                  
--- MuxB
-
+-- MuxB -------------------------------------------------------------------
 with selB select
     mux_b_out <= "0000000000000000" when "00",
                  b_reg_out when "01",
@@ -182,19 +180,17 @@ with selB select
                  lit_datain when "11";
                  
                  
--- Mux PC
-
+-- Mux PC -------------------------------------------------------------------
 with selPC select
     countPC_in <= ins_datain when '0',
                    ram_dataout(11 downto 0) when '1';
 
--- Mux datain
-
+-- Mux datain -------------------------------------------------------------------
 with selDIn select
     ram_datain <= alu_result when '0',
                    adder_out when '1';
 
--- Mux S
+-- Mux S -------------------------------------------------------------------
 with selAdd select
     ram_address <= ins_datain when "00",
                  b_reg_out(11 downto 0) when "01",
