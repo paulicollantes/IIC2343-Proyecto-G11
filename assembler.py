@@ -121,11 +121,14 @@ DICC = {
         },
         "CALL": { "Ins,": 0x5B },
         "RET": { ",": 0x5C},
+        "incSP" : {",":0x7E},
+        "decSP" : {",",0x7F},
     }
 
 class Assembler:
 
     def __init__(self):
+        self.lines = []
         self.variables = {}
         self.pos_variables = {}
         self.code = []
@@ -137,29 +140,35 @@ class Assembler:
             i = 0
             v = 0
             for line in file:
-                line = line.strip('\n')
-                if line.strip() == "DATA:":
+                self.lines.append(line.strip())
+            for line in self.lines:
+                #print(line.strip())
+                line_ins = line.split("//")
+                if line_ins[0].strip() == "DATA:":
                     i += 1
-                elif line.strip() == "CODE:":
+                elif line_ins[0].strip() == "CODE:":
                     i += 1
                     return i + 1
                 else:
                     var = line.split("//")
                     for l in var:
                         l.strip()
-                    # REVISAR - Como maneja los arrays
-                    if var[0].strip(" ") != "":
-                        print("mmmm", var)
-                        var[0].strip(" ")
-                        variable = var[0].split(" ")
-                        nombre = variable[0]
-                        valor = variable[1]
+                    var2 = var[0].split(" ")
+                    if var2 != "" and len(var2) > 1:
+                        nombre = var2[0]
+                        valor = []
+                        valor.append(var2[-1])
                         self.variables[nombre] = valor
                         self.pos_variables[nombre] = v
                         v += 1
                         i += 1
                     else:
-                        i += 1
+                        if len(var) == 1 and var[0]:
+                            self.variables[nombre].append(var[0])
+                            v += 1
+                            i += 1
+                        else:
+                            i += 1
     
 
     def save_code(self, code_start):
@@ -198,47 +207,34 @@ class Assembler:
             else:
                 inst = line[0:3]
                 arguments = line[3:].split(",")
+                #print(arguments)
                 for l in arguments:
                     l.strip()
                 arg_1 = arguments[0]
                 type_1, arg_1 = self.clean_arg(arg_1, inst)
+                a1 = self.variables.get(arg_1)
                 if type_1 == "Dir":
-                    try:
-                        self.variables[arg_1]
-                        arg_1 = self.variables[arg_1]
-                    except KeyError:
-                        pass
+                    if a1:
+                        arg_1 = self.variables[arg_1][0]
                 else:
-                    try:
-                        self.variables[arg_1]
+                    if a1:
                         arg_1 = self.pos_variables[arg_1]
-                    except KeyError:
-                        pass
-                try:
-                    self.labels[arg_1]
+                l1 = self.labels.get(arg_1)
+                if l1:
                     arg_1 = self.labels[arg_1]
-                except KeyError:
-                    pass
                 if len(arguments) > 1:
                     arg_2 = arguments[1]
                     type_2, arg_2 = self.clean_arg(arg_2, inst)
+                    a2 = self.variables.get(arg_2)
                     if type_1 == "Dir":
-                        try:
-                            self.variables[arg_2]
-                            arg_2 = self.variables[arg_2]
-                        except KeyError:
-                            pass
+                        if a2:
+                            arg_2 = self.variables[arg_2][0]
                     else:
-                        try:
-                            self.variables[arg_2]
+                        if a2:
                             arg_2 = self.pos_variables[arg_2]
-                        except KeyError:
-                            pass
-                    try:
-                        self.labels[arg_2]
-                        arg_2 = self.labels[arg_2]
-                    except KeyError:
-                        pass  
+                    l2 = self.labels.get(arg_2)
+                    if l2:
+                        arg_2 = self.labels[arg_2] 
                 else:
                     type_2 = ""
                     arg_2 = ""             
@@ -294,16 +290,27 @@ class Assembler:
             mostSignificatives = self.formatter(elemento2)
         else:
             mostSignificatives = self.formatter('')
-        bytesArray = [mostSignificatives + emptyBits + opcode]
-        """
-        Aquí añadir el manejo de casos de instrucciones de 2 ciclos.
-        Su when instruction case 'xxx' ... case 'yyy' ... y así, para
-            luego appendear esas líneas extras a bytesArray
+        bytesArray = []
+        bytesArray.append([mostSignificatives + emptyBits + opcode])
+        
+        if instruction == 'RET':
+            bytesArray=[]
+            opcode = [DICC['incSP'][operands],DICC[instruction][operands]]
+            mostSignificatives = self.formatter('')
+            for a in 2:
+                bytesArray.append([mostSignificatives + emptyBits + opcode[a]])
+        
+        elif instruction == 'POP':
+            mostSignificatives= self.formatter('')
+            bytesArray=[]
+            opcode = [DICC['incSP'][','], DICC[instruction][operands]]
+            for a in 2:
+                bytesArray.append([mostSignificatives + emptyBits + opcode[a]])
 
-        """
-        return bytearray
 
-    def instructionsToBytes (self, instructions):
+        return bytesArray
+
+    def instructionsToBytes(self, instructions):
         bytesArray = []
         for line in instructions:
             print('prr', line)
@@ -318,20 +325,27 @@ assembler = Assembler()
 code_start = assembler.save_vars(path)
 assembler.save_code(code_start)
 assembler.save_labels()
-instructions = assembler.separate()
 #print(assembler.variables)
 #print(assembler.pos_variables)
 #print(assembler.labels)
+
+instructions = assembler.separate()
+
 #for l in instructions:
 #    print(l)
-#instInBytes = assembler.intructionsToBytes(instructions)
+instInBytes = assembler.instructionsToBytes(instructions)
 #for l in instInBytes:
 #    print(l)
 
-
-instInBytes = assembler.instructionsToBytes(instructions)
 rom_programmer = Basys3()
 rom_programmer.begin()
-for i, line in enumerate(instInBytes):
-    rom_programmer.write(i, line)
-rom_programmer.end() 
+i = 0
+for line in instInBytes:
+    if len(line) > 1:
+        for llave, valor in assembler.labels.items():
+            if valor > i:
+                assembler.labels[llave] += 1
+    for byteArray in line:
+        rom_programmer.write(i, line)
+        i += 1
+rom_programmer.end()
