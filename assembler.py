@@ -281,7 +281,7 @@ class Assembler:
     def getByteArray(self, instruction = 'JMP', type1='', type2='', elemento1='', elemento2=''):
         global DICC
         types = ['Lit', 'Ins', 'Dir']
-        emptyBits = bytearray(0x003)
+        emptyBits = 0x000
         operands = f'{type1},{type2}'
         opcode = DICC[instruction][operands].to_bytes(2, byteorder='big', signed=False)
         if type1 in types:
@@ -291,21 +291,21 @@ class Assembler:
         else:
             mostSignificatives = self.formatter('')
         bytesArray = []
-        bytesArray.append([mostSignificatives + emptyBits + opcode])
+        bytesArray.append([mostSignificatives , emptyBits , opcode])
         
         if instruction == 'RET':
             bytesArray=[]
             opcode = [DICC['incSP'][operands],DICC[instruction][operands]]
             mostSignificatives = self.formatter('')
             for a in 2:
-                bytesArray.append([mostSignificatives + emptyBits + opcode[a]])
+                bytesArray.append([mostSignificatives , emptyBits , opcode[a]])
         
         elif instruction == 'POP':
             mostSignificatives= self.formatter('')
             bytesArray=[]
             opcode = [DICC['incSP'][','], DICC[instruction][operands]]
             for a in 2:
-                bytesArray.append([mostSignificatives + emptyBits + opcode[a]])
+                bytesArray.append([mostSignificatives , emptyBits , opcode[a]])
 
 
         return bytesArray
@@ -338,7 +338,10 @@ instInBytes = assembler.instructionsToBytes(instructions)
 #    print(l)
 
 rom_programmer = Basys3()
-rom_programmer.begin()
+print('Puertos:', end=' ')
+for i in rom_programmer.available_ports:
+    print(i.device, end=' -> ') # Revisar admin dispositivos de Win y seleccionar el USB
+rom_programmer.begin(4) # Colocar acá la posición que le correspondería
 i = 0
 for line in instInBytes:
     if len(line) > 1:
@@ -346,6 +349,7 @@ for line in instInBytes:
             if valor > i:
                 assembler.labels[llave] += 1
     for byteArray in line:
+        print(line)
         rom_programmer.write(i, line)
         i += 1
 rom_programmer.end()

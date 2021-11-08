@@ -671,3 +671,5 @@ dismissDialog("Program Device"); // bC (cr)
 dismissDialog("Program Device"); // bB (cr)
 // Elapsed time: 21 seconds
 selectCodeEditor("ROM.vhd", 174, 175); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,776 MB. GUI used memory: 106 MB. Current time: 11/8/21, 5:54:57 PM CLST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,776 MB. GUI used memory: 105 MB. Current time: 11/8/21, 6:24:57 PM CLST
