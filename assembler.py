@@ -141,7 +141,7 @@ class Assembler:
             v = 0
             for line in file:
                 self.lines.append(line.strip())
-            for line in file:
+            for line in self.lines:
                 #print(line.strip())
                 line_ins = line.split("//")
                 if line_ins[0].strip() == "DATA:":
@@ -207,7 +207,7 @@ class Assembler:
             else:
                 inst = line[0:3]
                 arguments = line[3:].split(",")
-                print(arguments)
+                #print(arguments)
                 for l in arguments:
                     l.strip()
                 arg_1 = arguments[0]
@@ -290,7 +290,8 @@ class Assembler:
             mostSignificatives = self.formatter(elemento2)
         else:
             mostSignificatives = self.formatter('')
-        bytesArray = [mostSignificatives + emptyBits + opcode]
+        bytesArray = []
+        bytesArray.append([mostSignificatives + emptyBits + opcode])
         
         if instruction == 'RET':
             bytesArray=[]
@@ -309,7 +310,7 @@ class Assembler:
 
         return bytesArray
 
-    def instructionsToBytes (self, instructions):
+    def instructionsToBytes(self, instructions):
         bytesArray = []
         for line in instructions:
             bytesArray += self.getByteArray(*line)
@@ -323,24 +324,27 @@ assembler = Assembler()
 code_start = assembler.save_vars(path)
 assembler.save_code(code_start)
 assembler.save_labels()
-print(assembler.variables)
-print(assembler.pos_variables)
-print(assembler.labels)
+#print(assembler.variables)
+#print(assembler.pos_variables)
+#print(assembler.labels)
 
 instructions = assembler.separate()
 
-for l in instructions:
-    print(l)
-#instInBytes = assembler.intructionsToBytes(instructions)
+#for l in instructions:
+#    print(l)
+instInBytes = assembler.instructionsToBytes(instructions)
 #for l in instInBytes:
 #    print(l)
 
-
-# instInBytes = assembler.intructionsToBytes(instructions)
-# rom_programmer = Basys3()
-# rom_programmer.begin()
-# i = 0
-# for line in instInBytes:
-#     rom_programmer.write(i, line)
-#     i += 1
-# rom_programmer.end()
+rom_programmer = Basys3()
+rom_programmer.begin()
+i = 0
+for line in instInBytes:
+    if len(line) > 1:
+        for llave, valor in assembler.labels.items():
+            if valor > i:
+                assembler.labels[llave] += 1
+    for byteArray in line:
+        rom_programmer.write(i, line)
+        i += 1
+rom_programmer.end()
