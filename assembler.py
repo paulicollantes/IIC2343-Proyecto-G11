@@ -172,7 +172,7 @@ class Assembler:
                             l.strip()
                         if codeline[0] != "":
                             self.code.append(codeline[0].strip("\n"))
-                    print(self.code)
+                    #print(self.code)
         
     def save_labels(self):
         i = 0
@@ -192,14 +192,14 @@ class Assembler:
         for line in self.code:
             line = line.strip()
             if len(line) > 0 and line[-1] == ":":
-                instructions.append(["NOP", None, None, None, None])
+                instructions.append(["NOP", "", "", "", ""])
             else:
                 inst = line[0:3]
                 arguments = line[3:].split(",")
                 for l in arguments:
                     l.strip()
                 arg_1 = arguments[0]
-                type_1, arg_1 = self.clean_arg(arg_1)
+                type_1, arg_1 = self.clean_arg(arg_1, inst)
                 if type_1 == "Dir":
                     try:
                         self.variables[arg_1]
@@ -219,7 +219,7 @@ class Assembler:
                     pass
                 if len(arguments) > 1:
                     arg_2 = arguments[1]
-                    type_2, arg_2 = self.clean_arg(arg_2)
+                    type_2, arg_2 = self.clean_arg(arg_2, inst)
                     if type_1 == "Dir":
                         try:
                             self.variables[arg_2]
@@ -238,22 +238,29 @@ class Assembler:
                     except KeyError:
                         pass  
                 else:
-                    type_2 = None
-                    arg_2 = None             
+                    type_2 = ""
+                    arg_2 = ""             
                 lineinst = [inst, type_1, type_2, arg_1, arg_2]
                 instructions.append(lineinst)
         return instructions
             
 
-    def clean_arg(self, arg):
+    def clean_arg(self, arg, inst):
+        lIns = ["JMP", "JEQ", "JWE", "JGT", "JGE", "JLT", "JLE", "JCR", "CALL"]
         valor = arg.strip()
         if valor[0] == "(":
-            valor = arg.strip("( )")
-            tipo = "Dir"
+            if arg.strip("( )") == "B":
+                valor = "(B)"
+                tipo = "(B)"
+            else:
+                valor = arg.strip("( )")
+                tipo = "Dir"
         elif valor == "A":
             tipo = "A"
         elif valor == "B":
             tipo = "B"
+        elif inst in lIns:
+            tipo = "Ins"
         else:
             tipo = "Lit"
         return (tipo, valor)
@@ -280,9 +287,9 @@ class Assembler:
         operands = f'{type1},{type2}'
         opcode = DICC[instruction][operands].to_bytes(2, byteorder='big', signed=False)
         if type1 in types:
-            mostSignificatives = self.formatter(type1)
+            mostSignificatives = self.formatter(elemento1)
         elif type2 in types:
-            mostSignificatives = self.formatter(type2)
+            mostSignificatives = self.formatter(elemento2)
         else:
             mostSignificatives = self.formatter('')
         
@@ -309,10 +316,14 @@ instructions = assembler.separate()
 #print(assembler.labels)
 #for l in instructions:
 #    print(l)
+#instInBytes = assembler.intructionsToBytes(instructions)
+#for l in instInBytes:
+#    print(l)
 
-""" instInBytes = assembler.intructionsToBytes(instructions)
+
+instInBytes = assembler.intructionsToBytes(instructions)
 rom_programmer = Basys3()
 rom_programmer.begin()
 for line in instInBytes:
     rom_programmer.write(0, line)
-rom_programmer.end() """
+rom_programmer.end() 
