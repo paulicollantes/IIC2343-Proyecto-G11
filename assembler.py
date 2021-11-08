@@ -137,7 +137,7 @@ class Assembler:
             i = 0
             v = 0
             for line in file:
-                #print(line.strip())
+                line = line.strip('\n')
                 if line.strip() == "DATA:":
                     i += 1
                 elif line.strip() == "CODE:":
@@ -148,7 +148,8 @@ class Assembler:
                     for l in var:
                         l.strip()
                     # REVISAR - Como maneja los arrays
-                    if var[0] != "":
+                    if var[0].strip(" ") != "":
+                        print("mmmm", var)
                         var[0].strip(" ")
                         variable = var[0].split(" ")
                         nombre = variable[0]
@@ -305,6 +306,7 @@ class Assembler:
     def instructionsToBytes (self, instructions):
         bytesArray = []
         for line in instructions:
+            print('prr', line)
             bytesArray += self.getByteArray(*line)
         return bytesArray
         
@@ -330,6 +332,6 @@ instructions = assembler.separate()
 instInBytes = assembler.instructionsToBytes(instructions)
 rom_programmer = Basys3()
 rom_programmer.begin()
-for line in instInBytes:
-    rom_programmer.write(0, line)
+for i, line in enumerate(instInBytes):
+    rom_programmer.write(i, line)
 rom_programmer.end() 

@@ -19,7 +19,7 @@ architecture Behavioral of ROM is
 type memory_array is array (0 to ((2 ** 12) - 1) ) of std_logic_vector (35 downto 0); 
 
 signal memory : memory_array:= (
-	"000000000000011000000000000000000010", --0 MOV A,6
+	"000000000000010100000000000000000010", --0 MOV A,6
 	"000000000000001100000000000000000011", --1 MOV B,3
 	"000000000000000100000000000000000110", --2 MOV (mult_a), A
 	"000000000000001000000000000000000111", --3 MOV (mult_b), B 

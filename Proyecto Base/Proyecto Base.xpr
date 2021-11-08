@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="44" Path="C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.xpr">
+<Project Version="7" Minor="44" Path="C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="a35b2fba0be742e6ac0032a12eca4df6"/>
