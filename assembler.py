@@ -276,14 +276,15 @@ class Assembler:
             literal = int('0x'+literal.replace('h', ''),16)
         if literal < 0:
             raise ValueError("Negative numbers not allowed")
-        return (literal).to_bytes(2, byteorder='big', signed=False)
+        return hex(literal)
+        #return (literal).to_bytes(2, byteorder='big', signed=False)
     
     def getByteArray(self, instruction = 'JMP', type1='', type2='', elemento1='', elemento2=''):
         global DICC
         types = ['Lit', 'Ins', 'Dir']
         emptyBits = 0x000
         operands = f'{type1},{type2}'
-        opcode = DICC[instruction][operands].to_bytes(2, byteorder='big', signed=False)
+        opcode = DICC[instruction][operands]# .to_bytes(2, byteorder='big', signed=False)
         if type1 in types:
             mostSignificatives = self.formatter(elemento1)
         elif type2 in types:
@@ -341,7 +342,6 @@ rom_programmer = Basys3()
 print('Puertos:', end=' ')
 for i in rom_programmer.available_ports:
     print(i.device, end=' -> ') # Revisar admin dispositivos de Win y seleccionar el USB
-rom_programmer.begin(4) # Colocar acá la posición que le correspondería
 i = 0
 for line in instInBytes:
     if len(line) > 1:
@@ -352,4 +352,5 @@ for line in instInBytes:
         print(line)
         rom_programmer.write(i, line)
         i += 1
+rom_programmer.begin(4) # Colocar acá la posición que le correspondería
 rom_programmer.end()

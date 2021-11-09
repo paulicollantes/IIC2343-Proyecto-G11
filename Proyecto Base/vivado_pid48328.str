@@ -673,3 +673,26 @@ dismissDialog("Program Device"); // bB (cr)
 selectCodeEditor("ROM.vhd", 174, 175); // ch (w, cr)
 // HMemoryUtils.trashcanNow. Engine heap size: 1,776 MB. GUI used memory: 106 MB. Current time: 11/8/21, 5:54:57 PM CLST
 // HMemoryUtils.trashcanNow. Engine heap size: 1,776 MB. GUI used memory: 105 MB. Current time: 11/8/21, 6:24:57 PM CLST
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183637824A 
+// TclEventType: HW_SERVER_UPDATE
+// n (cr): Close Hardware Target: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  541165 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3207 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3023 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,776 MB. GUI used memory: 105 MB. Current time: 11/8/21, 6:55:01 PM CLST
+// WARNING: HEventQueue.dispatchEvent() is taking  10886396 ms.
+// WARNING: HTimer (MainWindowUtils Timer) is taking 3345ms to process. Increasing delay to 11000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  4139 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,776 MB. GUI used memory: 105 MB. Current time: 11/8/21, 9:56:51 PM CLST
+// WARNING: HEventQueue.dispatchEvent() is taking  5258300 ms.
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 1560ms to process. Increasing delay to 5000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1302 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,776 MB. GUI used memory: 104 MB. Current time: 11/8/21, 11:24:35 PM CLST
+// WARNING: HEventQueue.dispatchEvent() is taking  1752 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2647 ms. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 5262337 ms. Increasing delay to 15787011 ms.
