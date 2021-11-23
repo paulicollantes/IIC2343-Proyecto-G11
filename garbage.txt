@@ -1,0 +1,49 @@
+def formatter(self, literal=''):
+        if not literal: # when empty ''
+            literal = 0
+        elif isinstance(literal, int): # when it's already number
+            pass
+        elif literal[-1] == 'd' or literal[-1] not in ['b', 'd', 'h']: # when it's a string number
+            literal = int(literal.replace('d',''))
+        elif literal[-1] == 'b': 
+            literal = int('0b'+literal.replace('b', ''),2)
+        elif literal[-1] == 'h':
+            literal = int('0x'+literal.replace('h', ''),16)
+        if literal < 0:
+            raise ValueError("Negative numbers not allowed")
+        return hex(literal)
+        #return (literal).to_bytes(2, byteorder='big', signed=False)
+    
+    def getByteArray(self, instruction = 'JMP', type1='', type2='', elemento1='', elemento2=''):
+        global DICC
+        types = ['Lit', 'Ins', 'Dir']
+        emptyBits = 0x000
+        operands = f'{type1},{type2}'
+        opcode = DICC[instruction][operands]# .to_bytes(2, byteorder='big', signed=False)
+        if type1 in types:
+            mostSignificatives = self.formatter(elemento1)
+        elif type2 in types:
+            mostSignificatives = self.formatter(elemento2)
+        else:
+            mostSignificatives = self.formatter('')
+        bytesArray = []
+        print("LINEA 169 aaa ", mostSignificatives, emptyBits, hex(opcode), end=" --> ")
+        bytesArray.append([mostSignificatives , emptyBits , opcode])
+        print(bytesArray[0])
+        
+        if instruction == 'RET':
+            bytesArray=[]
+            opcode = [DICC['incSP'][operands],DICC[instruction][operands]]
+            mostSignificatives = self.formatter('')
+            for a in 2:
+                bytesArray.append([mostSignificatives , emptyBits , opcode[a]])
+        
+        elif instruction == 'POP':
+            mostSignificatives= self.formatter('')
+            bytesArray=[]
+            opcode = [DICC['incSP'][','], DICC[instruction][operands]]
+            for a in 2:
+                bytesArray.append([mostSignificatives , emptyBits , opcode[a]])
+
+
+        return bytesArray
