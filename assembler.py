@@ -24,7 +24,7 @@ class Assembler:
             for line in self.lines:
                 #print(line.strip())
                 line_ins = line.split("//")
-                if line_ins[0].strip() == "DATA:":
+                if line_ins[0].strip() == "DATA:" or line_ins[0].strip() == "":
                     i += 1
                 elif line_ins[0].strip() == "CODE:":
                     i += 1
