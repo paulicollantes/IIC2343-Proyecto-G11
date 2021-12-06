@@ -217,7 +217,7 @@ signal lcd            : std_logic_vector(10 downto 0);
 signal out_2        : std_logic;
 signal out_3        : std_logic;
 signal displays      : std_logic_vector(15 downto 0);
-signal regs_datain      : std_logic_vector(15 downto 0);
+signal dead      : std_logic_vector(15 downto 0);
 
 
 
@@ -250,7 +250,7 @@ with clear select
      ram_write   => write_ram,
      rom_address => cpu_rom_address,
      rom_dataout => rom_dataout,
-     dis         => dis
+     dis         => dead
      );
 
 
@@ -326,7 +326,6 @@ inst_Timer: Timer port map(
 
 -- Registro DIS
 
-regs_datain <= ram_datain;
 
 inst_RegDis: Reg port map( 
            clock    => clock,                -- Señal del clock (reducido).
@@ -334,7 +333,7 @@ inst_RegDis: Reg port map(
            load     => out_2,                  -- Señal de carga.
            up       => '0',                  -- Señal de subida.
            down     => '0',                  -- Señal de bajada.
-           datain   => "0000000000000000",           -- Señales de entrada de datos.
+           datain   => ram_datain,           -- Señales de entrada de datos.
            dataout  => dis
 );
 
@@ -345,7 +344,7 @@ inst_RegLed: Reg port map(
            load     => out_3,                  -- Señal de carga.
            up       => '0',                  -- Señal de subida.
            down     => '0',                  -- Señal de bajada.
-           datain   => regs_datain,           -- Señales de entrada de datos.
+           datain   => ram_datain,           -- Señales de entrada de datos.
            dataout  => led
 );
 
