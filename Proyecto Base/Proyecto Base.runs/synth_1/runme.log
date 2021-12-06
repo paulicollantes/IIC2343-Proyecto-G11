@@ -15,94 +15,105 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5364 
+INFO: Helper process launched with PID 252 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 769.117 ; gain = 234.594
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 768.324 ; gain = 232.984
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Basys3' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:17]
-INFO: [Synth 8-3491] module 'CPU' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:7' bound to instance 'inst_CPU' of component 'CPU' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:212]
-INFO: [Synth 8-638] synthesizing module 'CPU' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:20]
-INFO: [Synth 8-3491] module 'Control_Unit' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Control_Unit.vhd:34' bound to instance 'inst_ControlUnit' of component 'Control_Unit' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:205]
-INFO: [Synth 8-638] synthesizing module 'Control_Unit' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Control_Unit.vhd:51]
-WARNING: [Synth 8-6044] Case expression and choice expression width mismatch, Case expression is 7 wide and choice expression is 8 wide [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Control_Unit.vhd:497]
-WARNING: [Synth 8-614] signal 'cu_status_in' is read in the process but is not in the sensitivity list [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Control_Unit.vhd:54]
-INFO: [Synth 8-256] done synthesizing module 'Control_Unit' (1#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Control_Unit.vhd:51]
-INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_RegA' of component 'Reg' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:224]
-INFO: [Synth 8-638] synthesizing module 'Reg' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'Reg' (2#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:17]
-INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_RegB' of component 'Reg' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:234]
-INFO: [Synth 8-3491] module 'Adder16' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:5' bound to instance 'inst_Adder' of component 'Adder16' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:249]
-INFO: [Synth 8-638] synthesizing module 'Adder16' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:13]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA0' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:27]
-INFO: [Synth 8-638] synthesizing module 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:12]
-INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:5' bound to instance 'inst_HA' of component 'HA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:29]
-INFO: [Synth 8-638] synthesizing module 'HA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:12]
-INFO: [Synth 8-256] done synthesizing module 'HA' (3#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:12]
-INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:5' bound to instance 'inst_HA2' of component 'HA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:36]
-INFO: [Synth 8-256] done synthesizing module 'FA' (4#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:12]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA1' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:35]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA2' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:43]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA3' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:51]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA4' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:59]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA5' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:67]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA6' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:75]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA7' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:83]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA8' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:90]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA9' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:97]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA10' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:104]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA11' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:111]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA12' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:118]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA13' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:125]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA14' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:132]
-INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA15' of component 'FA' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:139]
-INFO: [Synth 8-256] done synthesizing module 'Adder16' (5#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:13]
-INFO: [Synth 8-3491] module 'CountPC' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:7' bound to instance 'inst_CountPC' of component 'CountPC' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:257]
-INFO: [Synth 8-638] synthesizing module 'CountPC' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'CountPC' (6#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:17]
-INFO: [Synth 8-3491] module 'SP' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/SP.vhd:34' bound to instance 'inst_SP' of component 'SP' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:269]
-INFO: [Synth 8-638] synthesizing module 'SP' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/SP.vhd:41]
-INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_Reg' of component 'Reg' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/SP.vhd:60]
-INFO: [Synth 8-256] done synthesizing module 'SP' (7#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/SP.vhd:41]
-INFO: [Synth 8-3491] module 'Status' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Status.vhd:7' bound to instance 'inst_Status' of component 'Status' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:281]
-INFO: [Synth 8-638] synthesizing module 'Status' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Status.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'Status' (8#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Status.vhd:17]
-INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:4' bound to instance 'inst_ALU' of component 'ALU' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:293]
-INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:14]
-INFO: [Synth 8-3491] module 'Adder16' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:5' bound to instance 'inst_Adder16' of component 'Adder16' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:80]
-INFO: [Synth 8-256] done synthesizing module 'ALU' (9#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:14]
-WARNING: [Synth 8-3848] Net rom_address in module/entity CPU does not have driver. [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:15]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd-249.0 with 1st driver pin 'CPU:/inst_CountPC/dataout[0]' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:249]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd-249.0 with 2nd driver pin 'GND' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:249]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd-249.0 is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:249]
-INFO: [Synth 8-256] done synthesizing module 'CPU' (10#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:20]
-INFO: [Synth 8-3491] module 'ROM' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:6' bound to instance 'inst_ROM' of component 'ROM' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:226]
-INFO: [Synth 8-638] synthesizing module 'ROM' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'ROM' (11#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:17]
-INFO: [Synth 8-3491] module 'RAM' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:8' bound to instance 'inst_RAM' of component 'RAM' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:236]
-INFO: [Synth 8-638] synthesizing module 'RAM' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'RAM' (12#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:18]
-INFO: [Synth 8-3491] module 'Clock_Divider' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:7' bound to instance 'inst_Clock_Divider' of component 'Clock_Divider' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:245]
-INFO: [Synth 8-638] synthesizing module 'Clock_Divider' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:13]
-INFO: [Synth 8-256] done synthesizing module 'Clock_Divider' (13#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:13]
-INFO: [Synth 8-3491] module 'Display_Controller' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:7' bound to instance 'inst_Display_Controller' of component 'Display_Controller' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:252]
-INFO: [Synth 8-638] synthesizing module 'Display_Controller' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'Display_Controller' (14#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:19]
-INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer0' of component 'Debouncer' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:263]
-INFO: [Synth 8-638] synthesizing module 'Debouncer' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'Debouncer' (15#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:14]
-INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer1' of component 'Debouncer' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:264]
-INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer2' of component 'Debouncer' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:265]
-INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer3' of component 'Debouncer' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:266]
-INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer4' of component 'Debouncer' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:267]
-INFO: [Synth 8-3491] module 'Programmer' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:6' bound to instance 'inst_Programmer' of component 'Programmer' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:270]
-INFO: [Synth 8-638] synthesizing module 'Programmer' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:17]
-INFO: [Synth 8-3491] module 'UART' declared at 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:11' bound to instance 'inst_UART' of component 'UART' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:118]
-INFO: [Synth 8-638] synthesizing module 'UART' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'Basys3' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:17]
+INFO: [Synth 8-3491] module 'CPU' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:7' bound to instance 'inst_CPU' of component 'CPU' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:244]
+INFO: [Synth 8-638] synthesizing module 'CPU' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:20]
+INFO: [Synth 8-3491] module 'Control_Unit' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Control_Unit.vhd:34' bound to instance 'inst_ControlUnit' of component 'Control_Unit' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:205]
+INFO: [Synth 8-638] synthesizing module 'Control_Unit' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Control_Unit.vhd:51]
+WARNING: [Synth 8-6044] Case expression and choice expression width mismatch, Case expression is 7 wide and choice expression is 8 wide [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Control_Unit.vhd:497]
+WARNING: [Synth 8-614] signal 'cu_status_in' is read in the process but is not in the sensitivity list [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Control_Unit.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'Control_Unit' (1#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Control_Unit.vhd:51]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_RegA' of component 'Reg' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:224]
+INFO: [Synth 8-638] synthesizing module 'Reg' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'Reg' (2#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:17]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_RegB' of component 'Reg' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:234]
+INFO: [Synth 8-3491] module 'Adder16' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:5' bound to instance 'inst_Adder' of component 'Adder16' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:249]
+INFO: [Synth 8-638] synthesizing module 'Adder16' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:13]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA0' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:12]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:5' bound to instance 'inst_HA' of component 'HA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:29]
+INFO: [Synth 8-638] synthesizing module 'HA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'HA' (3#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:12]
+INFO: [Synth 8-3491] module 'HA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/HA.vhd:5' bound to instance 'inst_HA2' of component 'HA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'FA' (4#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:12]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA1' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:35]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA2' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:43]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA3' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:51]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA4' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:59]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA5' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:67]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA6' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:75]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA7' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:83]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA8' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:90]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA9' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:97]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA10' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:104]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA11' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:111]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA12' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:118]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA13' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:125]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA14' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:132]
+INFO: [Synth 8-3491] module 'FA' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/FA.vhd:4' bound to instance 'inst_FA15' of component 'FA' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:139]
+INFO: [Synth 8-256] done synthesizing module 'Adder16' (5#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:13]
+INFO: [Synth 8-3491] module 'CountPC' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:7' bound to instance 'inst_CountPC' of component 'CountPC' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:257]
+INFO: [Synth 8-638] synthesizing module 'CountPC' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'CountPC' (6#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:17]
+INFO: [Synth 8-3491] module 'SP' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/SP.vhd:34' bound to instance 'inst_SP' of component 'SP' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:269]
+INFO: [Synth 8-638] synthesizing module 'SP' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/SP.vhd:41]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_Reg' of component 'Reg' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/SP.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'SP' (7#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/SP.vhd:41]
+INFO: [Synth 8-3491] module 'Status' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Status.vhd:7' bound to instance 'inst_Status' of component 'Status' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:281]
+INFO: [Synth 8-638] synthesizing module 'Status' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Status.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'Status' (8#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Status.vhd:17]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:4' bound to instance 'inst_ALU' of component 'ALU' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:293]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:14]
+INFO: [Synth 8-3491] module 'Adder16' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Adder16.vhd:5' bound to instance 'inst_Adder16' of component 'Adder16' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (9#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:14]
+WARNING: [Synth 8-3848] Net rom_address in module/entity CPU does not have driver. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:15]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd-249.0 with 1st driver pin 'CPU:/inst_CountPC/dataout[0]' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:249]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd-249.0 with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:249]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd-249.0 is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:249]
+INFO: [Synth 8-256] done synthesizing module 'CPU' (10#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:20]
+INFO: [Synth 8-3491] module 'ROM' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:6' bound to instance 'inst_ROM' of component 'ROM' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:258]
+INFO: [Synth 8-638] synthesizing module 'ROM' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (11#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:17]
+INFO: [Synth 8-3491] module 'RAM' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:8' bound to instance 'inst_RAM' of component 'RAM' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:268]
+INFO: [Synth 8-638] synthesizing module 'RAM' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (12#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:18]
+INFO: [Synth 8-3491] module 'Clock_Divider' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:7' bound to instance 'inst_Clock_Divider' of component 'Clock_Divider' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:277]
+INFO: [Synth 8-638] synthesizing module 'Clock_Divider' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'Clock_Divider' (13#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:13]
+INFO: [Synth 8-3491] module 'Display_Controller' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:7' bound to instance 'inst_Display_Controller' of component 'Display_Controller' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:284]
+INFO: [Synth 8-638] synthesizing module 'Display_Controller' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'Display_Controller' (14#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:19]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer0' of component 'Debouncer' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:295]
+INFO: [Synth 8-638] synthesizing module 'Debouncer' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'Debouncer' (15#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:14]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer1' of component 'Debouncer' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:296]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer2' of component 'Debouncer' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:297]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer3' of component 'Debouncer' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:298]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer4' of component 'Debouncer' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:299]
+INFO: [Synth 8-3491] module 'Programmer' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:6' bound to instance 'inst_Programmer' of component 'Programmer' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:302]
+INFO: [Synth 8-638] synthesizing module 'Programmer' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:17]
+INFO: [Synth 8-3491] module 'UART' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:11' bound to instance 'inst_UART' of component 'UART' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:118]
+INFO: [Synth 8-638] synthesizing module 'UART' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:37]
 	Parameter DIVISOR bound to: 54 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'UART' (16#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'Programmer' (17#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:17]
-WARNING: [Synth 8-3848] Net led in module/entity Basys3 does not have driver. [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:8]
-INFO: [Synth 8-256] done synthesizing module 'Basys3' (18#1) [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'UART' (16#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'Programmer' (17#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:17]
+INFO: [Synth 8-3491] module 'Timer' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Timer.vhd:7' bound to instance 'inst_Timer' of component 'Timer' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:319]
+INFO: [Synth 8-638] synthesizing module 'Timer' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Timer.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'Timer' (18#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Timer.vhd:16]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_RegDis' of component 'Reg' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:331]
+INFO: [Synth 8-3491] module 'Reg' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:7' bound to instance 'inst_RegLed' of component 'Reg' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:342]
+WARNING: [Synth 8-6044] Case expression and choice expression width mismatch, Case expression is 4 wide and choice expression is 3 wide [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:358]
+WARNING: [Synth 8-6044] Case expression and choice expression width mismatch, Case expression is 4 wide and choice expression is 3 wide [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:359]
+WARNING: [Synth 8-6044] Case expression and choice expression width mismatch, Case expression is 4 wide and choice expression is 3 wide [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:360]
+WARNING: [Synth 8-6044] Case expression and choice expression width mismatch, Case expression is 4 wide and choice expression is 3 wide [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:361]
+INFO: [Synth 8-3491] module 'demux_1_to_3' declared at 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/1_to_3_demux.vhd:13' bound to instance 'inst_demux_out' of component 'demux_1_to_3' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:369]
+INFO: [Synth 8-638] synthesizing module 'demux_1_to_3' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/1_to_3_demux.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'demux_1_to_3' (19#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/1_to_3_demux.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'Basys3' (20#1) [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:17]
 WARNING: [Synth 8-3331] design Control_Unit has unconnected port cu_in[19]
 WARNING: [Synth 8-3331] design Control_Unit has unconnected port cu_in[18]
 WARNING: [Synth 8-3331] design Control_Unit has unconnected port cu_in[17]
@@ -128,22 +139,6 @@ WARNING: [Synth 8-3331] design CPU has unconnected port rom_address[3]
 WARNING: [Synth 8-3331] design CPU has unconnected port rom_address[2]
 WARNING: [Synth 8-3331] design CPU has unconnected port rom_address[1]
 WARNING: [Synth 8-3331] design CPU has unconnected port rom_address[0]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[15]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[14]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[13]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[12]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[11]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[10]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[9]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[8]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[7]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[6]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[5]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[4]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[3]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[2]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[1]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[0]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[15]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[14]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[13]
@@ -161,7 +156,7 @@ WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[2]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[1]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 844.047 ; gain = 309.523
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 843.516 ; gain = 308.176
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -174,47 +169,146 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 844.047 ; gain = 309.523
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 843.516 ; gain = 308.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 844.047 ; gain = 309.523
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 843.516 ; gain = 308.176
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 844.047 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 843.516 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc]
-Finished Parsing XDC File [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Basys3_propImpl.xdc].
+Parsing XDC File [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc]
+WARNING: [Vivado 12-584] No ports matched 'lcd[0]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[0]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[1]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[1]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:150]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:150]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[2]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[2]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[3]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:155]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[3]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:156]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:156]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[4]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[4]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:159]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:159]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[5]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:161]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:161]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[5]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:162]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:162]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[6]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:164]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:164]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[6]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:165]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:165]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[7]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:167]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:167]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[7]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:168]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:168]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[0]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:174]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:174]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[0]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:175]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:175]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[0]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:177]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:177]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[0]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:178]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:178]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[2]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:180]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:180]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[2]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:181]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:181]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'spk'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:183]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:183]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'spk'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:184]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:184]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[9]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:186]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:186]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[9]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:187]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:187]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[8]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:189]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:189]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[8]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:190]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:190]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[10]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:192]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:192]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd[10]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:193]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:193]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[7]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:195]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:195]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JC[7]'. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:196]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc:196]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/constrs_1/new/Basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Basys3_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Basys3_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 948.434 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 950.285 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 948.434 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 950.285 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 948.434 ; gain = 413.910
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 950.285 ; gain = 414.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 948.434 ; gain = 413.910
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 950.285 ; gain = 414.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 948.434 ; gain = 413.910
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 950.285 ; gain = 414.945
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+WARNING: [Synth 8-327] inferring latch for variable 'out_1_reg' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/1_to_3_demux.vhd:29]
+WARNING: [Synth 8-327] inferring latch for variable 'out_2_reg' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/1_to_3_demux.vhd:31]
+WARNING: [Synth 8-327] inferring latch for variable 'out_3_reg' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/1_to_3_demux.vhd:33]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 948.434 ; gain = 413.910
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 950.285 ; gain = 414.945
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -227,6 +321,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input      7 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 4     
 	   2 Input      3 Bit       Adders := 1     
@@ -239,6 +334,7 @@ Detailed RTL Component Info :
 	               12 Bit    Registers := 1     
 	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 7     
+	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 1     
 	                5 Bit    Registers := 1     
 	                4 Bit    Registers := 4     
@@ -248,8 +344,8 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     36 Bit        Muxes := 1     
 	   4 Input     27 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 2     
-	   4 Input     16 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+	   4 Input     16 Bit        Muxes := 3     
 	   2 Input     12 Bit        Muxes := 4     
 	   2 Input      9 Bit        Muxes := 3     
 	   2 Input      8 Bit        Muxes := 1     
@@ -265,7 +361,7 @@ Detailed RTL Component Info :
 	  96 Input      2 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 3     
 	  96 Input      1 Bit        Muxes := 6     
-	   2 Input      1 Bit        Muxes := 26    
+	   2 Input      1 Bit        Muxes := 33    
 	   8 Input      1 Bit        Muxes := 4     
 	  10 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 1     
@@ -283,6 +379,8 @@ Hierarchical RTL Component report
 Module Basys3 
 Detailed RTL Component Info : 
 +---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 1     
 Module Control_Unit 
 Detailed RTL Component Info : 
@@ -391,6 +489,14 @@ Detailed RTL Component Info :
 	   7 Input      1 Bit        Muxes := 1     
 	   6 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 1     
+Module Timer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -407,22 +513,6 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[15]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[14]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[13]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[12]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[11]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[10]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[9]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[8]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[7]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[6]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[5]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[4]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[3]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[2]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[1]
-WARNING: [Synth 8-3331] design Basys3 has unconnected port led[0]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[15]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[14]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[13]
@@ -440,24 +530,24 @@ WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[2]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[1]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[0]
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst_Programmer/inst_UART/tx_state_reg[bits][8] )
-INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[0]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[12]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[13]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[14]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[15]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[1]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[2]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[3]'
-INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[3]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[4]'
-INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[4]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[5]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[6]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[7]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[4]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[12]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[13]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[14]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[15]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[5]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[6]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[7]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[0]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_Programmer/state_reg[3] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_Programmer/inst_UART/tx_state_reg[fsm_state] )
-INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[8]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[9]'
-INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[9]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[10]'
-INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[10]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[11]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_CPU/inst_SP/inst_Reg/reg_reg[11] )
+INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[8]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[9]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[10]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[11]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[0]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[1]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[3]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_CPU/inst_SP/inst_Reg/reg_reg[2] )
 INFO: [Synth 8-3886] merging instance 'inst_Programmer/inst_UART/tx_state_reg[bits][8]' (FDE) to 'inst_Programmer/inst_UART/tx_state_reg[bits][7]'
 INFO: [Synth 8-3886] merging instance 'inst_Programmer/inst_UART/tx_state_reg[bits][7]' (FDE) to 'inst_Programmer/inst_UART/tx_state_reg[bits][6]'
 INFO: [Synth 8-3886] merging instance 'inst_Programmer/inst_UART/tx_state_reg[bits][6]' (FDE) to 'inst_Programmer/inst_UART/tx_state_reg[bits][5]'
@@ -471,44 +561,93 @@ INFO: [Synth 8-3886] merging instance 'inst_Programmer/inst_UART/tx_state_reg[nb
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_Programmer/inst_UART/tx_state_reg[nbits][1] )
 INFO: [Synth 8-3886] merging instance 'inst_Programmer/inst_UART/tx_state_reg[bits][1]' (FDE) to 'inst_Programmer/inst_UART/tx_state_reg[bits][0]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst_Programmer/inst_UART/tx_state_reg[bits][0] )
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[11] with 1st driver pin 'inst_CountPCi_0/out[11]' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[11] with 2nd driver pin 'GND' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net b[11] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[10] with 1st driver pin 'inst_CountPCi_0/out[10]' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[10] with 2nd driver pin 'GND' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net b[10] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[9] with 1st driver pin 'inst_CountPCi_0/out[9]' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[9] with 2nd driver pin 'GND' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net b[9] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[8] with 1st driver pin 'inst_CountPCi_0/out[8]' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[8] with 2nd driver pin 'GND' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net b[8] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[7] with 1st driver pin 'inst_CountPCi_0/out[7]' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[7] with 2nd driver pin 'GND' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net b[7] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[6] with 1st driver pin 'inst_CountPCi_0/out[6]' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[6] with 2nd driver pin 'GND' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net b[6] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[5] with 1st driver pin 'inst_CountPCi_0/out[5]' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[5] with 2nd driver pin 'GND' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net b[5] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[4] with 1st driver pin 'inst_CountPCi_0/out[4]' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[4] with 2nd driver pin 'GND' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net b[4] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[3] with 1st driver pin 'inst_CountPCi_0/out[3]' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[3] with 2nd driver pin 'GND' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net b[3] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[2] with 1st driver pin 'inst_CountPCi_0/out[2]' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[2] with 2nd driver pin 'GND' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net b[2] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[1] with 1st driver pin 'inst_CountPCi_0/out[1]' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[1] with 2nd driver pin 'GND' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net b[1] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[0] with 1st driver pin 'inst_CountPCi_0/out[0]' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[0] with 2nd driver pin 'GND' [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net b[0] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[11] with 1st driver pin 'inst_CountPCi_2/out[11]' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[11] with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net b[11] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[10] with 1st driver pin 'inst_CountPCi_2/out[10]' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[10] with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net b[10] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[9] with 1st driver pin 'inst_CountPCi_2/out[9]' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[9] with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net b[9] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[8] with 1st driver pin 'inst_CountPCi_2/out[8]' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[8] with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net b[8] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[7] with 1st driver pin 'inst_CountPCi_2/out[7]' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[7] with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net b[7] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[6] with 1st driver pin 'inst_CountPCi_2/out[6]' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[6] with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net b[6] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[5] with 1st driver pin 'inst_CountPCi_2/out[5]' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[5] with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net b[5] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[4] with 1st driver pin 'inst_CountPCi_2/out[4]' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[4] with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net b[4] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[3] with 1st driver pin 'inst_CountPCi_2/out[3]' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[3] with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net b[3] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[2] with 1st driver pin 'inst_CountPCi_2/out[2]' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[2] with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net b[2] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[1] with 1st driver pin 'inst_CountPCi_2/out[1]' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[1] with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net b[1] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[0] with 1st driver pin 'inst_CountPCi_2/out[0]' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin b[0] with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net b[0] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
+WARNING: [Synth 8-3332] Sequential element (inst_demux_out/out_2_reg) is unused and will be removed from module Basys3.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegA/reg_reg[0]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegA/reg_reg[1]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegA/reg_reg[2]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegA/reg_reg[3]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegA/reg_reg[4]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegA/reg_reg[5]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegA/reg_reg[6]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegA/reg_reg[7]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegB/reg_reg[0]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegB/reg_reg[1]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegB/reg_reg[2]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegB/reg_reg[3]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegB/reg_reg[4]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegB/reg_reg[5]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegB/reg_reg[6]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/inst_CPU/inst_RegB/reg_reg[7]/Q' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 948.434 ; gain = 413.910
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 950.285 ; gain = 414.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -547,13 +686,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 948.434 ; gain = 413.910
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 950.285 ; gain = 414.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 951.512 ; gain = 416.988
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 951.738 ; gain = 416.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -580,7 +719,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:00:59 . Memory (MB): peak = 968.984 ; gain = 434.461
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 984.926 ; gain = 449.586
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -604,13 +743,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:00 ; elapsed = 00:01:06 . Memory (MB): peak = 973.848 ; gain = 439.324
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 989.934 ; gain = 454.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:00 ; elapsed = 00:01:06 . Memory (MB): peak = 973.848 ; gain = 439.324
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 989.934 ; gain = 454.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -629,25 +768,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 973.848 ; gain = 439.324
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 989.934 ; gain = 454.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 973.848 ; gain = 439.324
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 989.934 ; gain = 454.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 973.848 ; gain = 439.324
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 989.934 ; gain = 454.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 973.848 ; gain = 439.324
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 989.934 ; gain = 454.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -663,64 +802,69 @@ Report Cell Usage:
 +------+----------+------+
 |      |Cell      |Count |
 +------+----------+------+
-|1     |BUFG      |     3|
-|2     |CARRY4    |    24|
-|3     |LUT1      |     8|
-|4     |LUT2      |   126|
-|5     |LUT3      |    98|
-|6     |LUT4      |    65|
-|7     |LUT5      |    66|
-|8     |LUT6      |   252|
-|9     |MUXF7     |    65|
-|10    |MUXF8     |    20|
-|11    |RAM256X1S |   472|
-|12    |FDRE      |   185|
-|13    |IBUF      |     2|
-|14    |OBUF      |    13|
-|15    |OBUFT     |    16|
+|1     |BUFG      |     4|
+|2     |CARRY4    |    40|
+|3     |LUT1      |    43|
+|4     |LUT2      |   207|
+|5     |LUT3      |    75|
+|6     |LUT4      |    62|
+|7     |LUT5      |    67|
+|8     |LUT6      |   317|
+|9     |MUXF7     |    73|
+|10    |MUXF8     |    25|
+|11    |RAM256X1S |   568|
+|12    |FDRE      |   240|
+|13    |LD        |     2|
+|14    |IBUF      |     7|
+|15    |OBUF      |    29|
 +------+----------+------+
 
 Report Instance Areas: 
 +------+--------------------------+-------------------+------+
 |      |Instance                  |Module             |Cells |
 +------+--------------------------+-------------------+------+
-|1     |top                       |                   |  1415|
-|2     |  inst_RAM                |RAM                |   368|
-|3     |  inst_CPU                |CPU                |    54|
+|1     |top                       |                   |  1759|
+|2     |  inst_RAM                |RAM                |   363|
+|3     |  inst_CPU                |CPU                |    29|
 |4     |    inst_ControlUnit      |Control_Unit       |     2|
-|5     |    inst_RegA             |Reg                |    27|
-|6     |    inst_RegB             |Reg_0              |    16|
-|7     |    inst_Status           |Status             |     9|
+|5     |    inst_RegA             |Reg_0              |     8|
+|6     |    inst_RegB             |Reg_1              |     8|
+|7     |    inst_Status           |Status             |    11|
 |8     |  inst_Clock_Divider      |Clock_Divider      |    67|
 |9     |  inst_Display_Controller |Display_Controller |    33|
-|10    |  inst_Programmer         |Programmer         |   211|
+|10    |  inst_Programmer         |Programmer         |   236|
 |11    |    inst_UART             |UART               |    57|
-|12    |  inst_ROM                |ROM                |   648|
+|12    |  inst_ROM                |ROM                |   858|
+|13    |  inst_RegLed             |Reg                |    20|
+|14    |  inst_Timer              |Timer              |   111|
+|15    |  inst_demux_out          |demux_1_to_3       |     2|
 +------+--------------------------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 973.848 ; gain = 439.324
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 989.934 ; gain = 454.594
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 36 critical warnings and 32 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:01:02 . Memory (MB): peak = 973.848 ; gain = 334.938
-Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 973.848 ; gain = 439.324
+Synthesis finished with 0 errors, 84 critical warnings and 20 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 989.934 ; gain = 347.824
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 989.934 ; gain = 454.594
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 985.918 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 581 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 989.934 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 708 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 985.918 ; gain = 0.000
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 989.934 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 472 instances were transformed.
-  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 472 instances
+  A total of 570 instances were transformed.
+  LD => LDCE: 1 instance 
+  LD => LDCE (inverted pins: G): 1 instance 
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 568 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-122 Infos, 93 Warnings, 39 Critical Warnings and 0 Errors encountered.
+130 Infos, 100 Warnings, 119 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:10 ; elapsed = 00:01:19 . Memory (MB): peak = 985.918 ; gain = 687.734
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 985.918 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 989.934 ; gain = 692.188
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 989.934 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/felip/Desktop/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.runs/synth_1/Basys3.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Sebastian/Desktop/Material UC/2021-2/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.runs/synth_1/Basys3.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Basys3_utilization_synth.rpt -pb Basys3_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Nov  8 17:30:47 2021...
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  5 23:17:01 2021...

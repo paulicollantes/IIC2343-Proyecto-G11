@@ -156,6 +156,27 @@ component ALU is
            n        : out std_logic;                       -- Señal de 'nagative'.
            result   : out std_logic_vector (15 downto 0)); -- Resultado de la operación.
 end component;
+
+-- Definición de Timer
+
+component Timer is
+    Port ( clk : in STD_LOGIC;
+           clear   : in STD_LOGIC;
+           seconds : out STD_LOGIC_VECTOR (15 downto 0);
+           mseconds: out STD_LOGIC_VECTOR (15 downto 0);
+           useconds: out STD_LOGIC_VECTOR (15 downto 0));
+           
+end component;
+
+-- Definición de DeMux
+
+component demux_1_to_3 is
+    Port ( datain : in STD_LOGIC;
+           selector : in STD_LOGIC_VECTOR (1 downto 0);
+           out_1 : out STD_LOGIC;
+           out_2 : out STD_LOGIC;
+           out_3 : out STD_LOGIC);
+end component;
 -- Fin de la declaración de los componentes.
 
 -- Inicio de la declaración de señales.
@@ -169,7 +190,7 @@ signal dis_d            : std_logic_vector(3 downto 0);  -- Señales de salida al
 
 signal dis              : std_logic_vector(15 downto 0); -- Señales de salida totalidad de los displays.
 
-signal d_btn            : std_logic_vector(4 downto 0);  -- Señales de botones con anti-rebote.
+signal d_btn            : std_logic_vector(15 downto 0);  -- Señales de botones con anti-rebote.
 
 signal write_rom        : std_logic;                     -- Señal de escritura de la ROM.
 signal pro_address      : std_logic_vector(11 downto 0); -- Señales del direccionamiento de programación de la ROM.
@@ -187,6 +208,17 @@ signal ram_datain       : std_logic_vector(15 downto 0); -- Señales de la palabr
 signal ram_dataout      : std_logic_vector(15 downto 0); -- Señales de la palabra de salida de la RAM.
 
 -- señales propias 
+
+signal t_seconds        :std_logic_vector(15 downto 0); ---Señales provenientes del timer que equivalen a los segundos
+signal t_miliseconds        :std_logic_vector(15 downto 0); ---Señales provenientes del timer que equivalen a los milisegundos
+signal t_microseconds        :std_logic_vector(15 downto 0); ---Señales provenientes del timer que equivalen a los microsegundos
+signal mux_in_result      : std_logic_vector(15 downto 0);
+signal lcd            : std_logic_vector(10 downto 0);
+signal out_2        : std_logic;
+signal out_3        : std_logic;
+signal displays      : std_logic_vector(15 downto 0);
+signal regs_datain      : std_logic_vector(15 downto 0);
+
 
 
 
@@ -214,7 +246,7 @@ with clear select
      clear       => clear,
      ram_address => ram_address,
      ram_datain  => ram_datain,
-     ram_dataout => ram_dataout,
+     ram_dataout => mux_in_result,
      ram_write   => write_ram,
      rom_address => cpu_rom_address,
      rom_dataout => rom_dataout,
@@ -277,6 +309,72 @@ inst_Programmer: Programmer port map(
     address     => pro_address(11 downto 0),-- No Tocar - Salida de señales del address de la ROM.
     dataout     => rom_datain               -- No Tocar - Salida de señales palabra de entrada de la ROM.
         );
+        
+        
+        
+-- ENTREGA 3
+
+-- Instancia del Timer.
+
+inst_Timer: Timer port map(
+    clk => clock,
+    clear   => clear,
+    seconds => t_seconds,
+    mseconds => t_miliseconds,
+    useconds => t_microseconds
+);
+
+-- Registro DIS
+
+regs_datain <= ram_datain;
+
+inst_RegDis: Reg port map( 
+           clock    => clock,                -- Señal del clock (reducido).
+           clear    => '0',                -- Señal de reset.
+           load     => out_2,                  -- Señal de carga.
+           up       => '0',                  -- Señal de subida.
+           down     => '0',                  -- Señal de bajada.
+           datain   => "0000000000000000",           -- Señales de entrada de datos.
+           dataout  => dis
+);
+
+-- Registro LED
+inst_RegLed: Reg port map( 
+           clock    => clock,                -- Señal del clock (reducido).
+           clear    => '0',                -- Señal de reset.
+           load     => out_3,                  -- Señal de carga.
+           up       => '0',                  -- Señal de subida.
+           down     => '0',                  -- Señal de bajada.
+           datain   => regs_datain,           -- Señales de entrada de datos.
+           dataout  => led
+);
+
+
+-- MUX IN
+displays(4 downto 0 ) <= btn (4 downto 0);
+displays(15 downto 5 ) <= lcd;
+
+with ram_address(3 downto 0) select
+    mux_in_result <= ram_dataout when "000",
+                   t_seconds when "001",
+                   t_miliseconds when "010",
+                   t_microseconds when "011",
+                   displays when others;
+
+
+-- DeMUX OUT
+
+lcd(10 downto 1) <= ram_datain(9 downto 0);
+
+inst_demux_out: demux_1_to_3 port map( 
+            datain => write_ram,
+           selector => ram_address(1 downto 0),
+           out_1 => lcd(0),
+           out_2 => out_2,
+           out_3 => out_3);
+
+
+
         
 -- Fin de declaración de instancias.
 
