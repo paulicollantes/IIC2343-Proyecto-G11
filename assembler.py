@@ -92,7 +92,7 @@ class Assembler:
         for line in self.code:
             line = line.strip()
             if len(line) > 0 and line[-1] == ":":
-                instructions.append(["NOP", "", "", "", ""])
+                pass # instructions.append(["NOP", "", "", "", ""])
             else:
                 inst = line[0:3]
                 arguments = line[3:].split(",")
@@ -161,13 +161,19 @@ class Assembler:
         return bytesArray
         
 if __name__ == '__main__':
-    debug = True
+    #debug = 'todos'
+    debug = 'especial'
+    #debug = 'input'
+    programDevice = True
     tests = ['./tests/Test 0 - Mínimo.txt',
              './tests/Test 1 - Ram y Status.txt',
              './tests/Test 2 - Indirecto y Stack.txt',
-             './tests/Test 3 - Entrada y Salida.txt'] 
-
-    paths = tests if debug else [sys.argv[1]]
+             './tests/Test 3 - Entrada y Salida.txt',
+             './tests/contador.txt'] 
+    if debug == 'input': paths = [sys.argv[1]]
+    elif debug=='todos': paths = tests
+    elif debug == 'especial': paths=[tests[int(sys.argv[1])]]
+    print(paths)
     for path in paths:
         assembler = Assembler()
         code_start = assembler.save_vars(path)
@@ -185,22 +191,64 @@ if __name__ == '__main__':
         #for l in instInBytes:
         #    print(l)
         print(instInBytes)
-        """
-        rom_programmer = Basys3()
-        print('Puertos:', end=' ')
-        for i in rom_programmer.available_ports:
-            print(i.device, end=' -> ') # Revisar admin dispositivos de Win y seleccionar el USB
-        i = 0
-        for line in instInBytes:
-            if len(line) > 1:
-                for llave, valor in assembler.labels.items():
-                    if valor > i:
-                        assembler.labels[llave] += 1
-            for byteArray in line:
-                print(line)
-                rom_programmer.write(i, line)
+        if programDevice:
+            rom_programmer = Basys3()
+            rom_programmer.begin(4) # Colocar acá la posición que le correspondería
+            # ----------------------------bytearray ([par1, par2, par3, par4, par5])
+            # -------------------------par5=Opcode, par4 y par3.2 vacio, par3.1 par 2 par 1.2 literal
+            # print(rom_programmer.write(0, bytearray([0x00, 0x00, 0x00, 0x00, 0x02])))
+            print(rom_programmer.write(1, bytearray([0x00, 0x00, 0x10, 0x00, 0x03])))
+            print(rom_programmer.write(2, bytearray([0x00, 0x00, 0x30, 0x00, 0x02])))
+            print(rom_programmer.write(3, bytearray([0x00, 0x00, 0x00, 0x00, 0x09])))
+            print(rom_programmer.write(4, bytearray([0x00, 0x00, 0x00, 0x00, 0x00])))
+            print(rom_programmer.write(5, bytearray([0x00, 0x00, 0x00, 0x00, 0x09])))
+            print(rom_programmer.write(6, bytearray([0x00, 0x00, 0x00, 0x00, 0x0F])))
+            rom_programmer.end()
+            # print(rom_programmer.write(7, bytearray([0x00, 0x00, 0x30, 0x00, 0x09])))
+
+            #print(rom_programmer.write(3, bytearray([0x00, 0x00, 0x70, 0x00, 0x09])))
+            #print(rom_programmer.write(4, bytearray([0x00, 0x00, 0x00, 0x00, 0x02])))
+            #print(rom_programmer.write(4, bytearray([0x00, 0x01, 0x00, 0x00, 0x3B])))
+
+            #print(rom_programmer.write(4, bytearray([0x00, 0x00, 0x23, 0x00, 0x03])))
+            #print(rom_programmer.write(5, bytearray([0x00, 0x00, 0xA3, 0x00, 0x09])))
+            #print(rom_programmer.write(6, bytearray([0x00, 0x00, 0x23, 0x00, 0x03])))
+            # print(rom_programmer.write(6, bytearray([0x00, 0x01, 0x03, 0x00, 0x3B])))
+            #rom_programmer.write(6, bytearray([0x00, 0x00, 0x03, 0x00, 0x09]))
+            #rom_programmer.write(7, bytearray([0x00, 0x00, 0x53, 0x00, 0x02]))
+            #rom_programmer.write(8, bytearray([0x00, 0x00, 0xA3, 0x00, 0x09]))
+
+
+
+
+            # ---------------------------------------------------------------------
+            # --------------------------------------------------------------------
+            print('Puertos:', end=' ')
+            for i in rom_programmer.available_ports:
+                print(i.device, end=' -> ') # Revisar admin dispositivos de Win y seleccionar el USB
+            i = 0
+            for line in instInBytes:
+                if len(line) > 1:
+                    for llave, valor in assembler.labels.items():
+                        if valor > i:
+                            assembler.labels[llave] += 1
+                print('linea 205',i, line)
+                #rom_programmer.write(i, line)
                 i += 1
-        rom_programmer.begin(4) # Colocar acá la posición que le correspondería
-        rom_programmer.end()
-        """
-        time.sleep(5)
+                #for byteArray in line:
+                #    print('linea 206', line)
+                #    rom_programmer.write(i, line)
+                #    i += 1
+                """
+                if i%2==0:
+                    print('oooo')
+                    print(rom_programmer.write(i, bytearray([0x00, 0x00, 0x93, 0x00, 0x02])))
+                    print(rom_programmer.write(i+1, bytearray([0x00, 0x00, 0x73, 0x00, 0x03])))
+                else:
+                    print('eeee')
+                    print(rom_programmer.write(i, bytearray([0x00, 0x00, 0x83, 0x00, 0x02])))
+                    print(rom_programmer.write(i+1, bytearray([0x00, 0x00, 0x43, 0x00, 0x03])))
+                i += 1"""
+
+        
+        #time.sleep(5)

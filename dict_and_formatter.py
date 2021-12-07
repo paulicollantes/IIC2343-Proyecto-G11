@@ -142,6 +142,7 @@ def getWordArray(instruction = 'JMP', type1='', type2='', elemento1='', elemento
         global DICC
         types = ['Lit', 'Ins', 'Dir']
         operands = f'{type1},{type2}'
+        print(instruction, type1, type2, elemento1, elemento2)
         opcode = DICC[instruction][operands]
         if type1 in types:
             mostSignificatives = formatter(elemento1)

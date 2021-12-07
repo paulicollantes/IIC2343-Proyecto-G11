@@ -1,0 +1,8 @@
+DATA:
+
+CODE:
+MOV A,0
+MOV A,1
+MOV A,2
+MOV A,3
+MOV A,4

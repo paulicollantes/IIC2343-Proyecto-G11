@@ -494,7 +494,7 @@ begin
       selPC  <= '0';
       selDIn <= '0';
       
-     when "00010111" =>
+     when "0010111" =>
       enableA <= '0';
       enableB <= '1';
       selA <= "01";

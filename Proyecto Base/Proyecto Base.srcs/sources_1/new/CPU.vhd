@@ -135,8 +135,7 @@ signal loadPC           : std_logic;
 
 signal c_z_n            : std_Logic_vector(2 downto 0);
 
-signal countpc_dataout  : std_logic_vector(11 downto 0);
-
+--signal countpc_dataout  : std_logic_vector(11 downto 0);
 
 signal cu_datain        : std_logic_vector(19 downto 0);
 signal cu_status_in     : std_logic_vector(2 downto 0);
@@ -195,7 +194,8 @@ with selAdd select
     ram_address <= ins_datain when "00",
                  b_reg_out(11 downto 0) when "01",
                  SP_out when others;
-                 
+-- ALGO --------------------------------------------------------------------
+rom_address <= countPC_out;
 -- Instancia Control Unit
 
 cu_datain <= rom_dataout(19 downto 0);
