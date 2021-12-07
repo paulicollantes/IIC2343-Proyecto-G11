@@ -4,7 +4,8 @@ from dict_and_formatter import DICC, getWordArray
 import os
 import time
 
-
+## TO DO
+## Arreglar avance punteros 
 
 class Assembler:
     def __init__(self):
@@ -34,11 +35,12 @@ class Assembler:
                     var2 = var[0].split(" ")
                     if var2 != "" and len(var2) > 1:
                         nombre = var2[0]
-                        valor = []
-                        valor.append(var2[-1])
+                        var_value , sum_v = self.valor_to_ascii(var2[-1])
+                        valor = [] 
+                        valor.append(var_value)
                         self.variables[nombre] = valor
                         self.pos_variables[nombre] = v
-                        v += 1
+                        v += sum_v
                         i += 1
                     else:
                         if len(var) == 1 and var[0]:
@@ -46,8 +48,24 @@ class Assembler:
                             v += 1
                             i += 1
                         else:
-                            i += 1
+                            i += 1 
     
+    def valor_to_ascii(self, var):
+        if "\'" in var or "\"" in var:
+            new_var = var.strip("\"")
+            new_var = new_var.strip("\'")
+            var_list = list(new_var)
+            if len(var_list) > 1:
+                for car in var_list:
+                    self.variables[car] = ord(car)
+                var_list.append('0')               
+            ascii_list = [ord(c) for c in var_list]
+            sum_var = len(var_list)
+            return (ascii_list, sum_var)
+        else:
+            new_var = var
+            sum_var = 1
+        return (new_var, sum_var)
 
     def save_code(self, code_start):
         with open(path, "r") as file:
@@ -57,7 +75,7 @@ class Assembler:
                 if i >= code_start:
                     if line != "\n":
                         codeline = [l.strip() for l in line.split("//")]
-                        if codeline[0] != "":
+                        if codeline[0].strip() != "":
                             self.code.append(codeline[0].strip("\n")) # REVISAR - No faltaría este strip arriba? (save_vars)
                     #print(self.code)
         
