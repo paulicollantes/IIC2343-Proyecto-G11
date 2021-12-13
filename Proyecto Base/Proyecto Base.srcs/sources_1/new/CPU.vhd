@@ -135,8 +135,6 @@ signal loadPC           : std_logic;
 
 signal c_z_n            : std_Logic_vector(2 downto 0);
 
-signal countpc_dataout  : std_logic_vector(11 downto 0);
-
 
 signal cu_datain        : std_logic_vector(19 downto 0);
 signal cu_status_in     : std_logic_vector(2 downto 0);
@@ -196,6 +194,19 @@ with selAdd select
                  b_reg_out(11 downto 0) when "01",
                  SP_out when others;
                  
+
+-- Count PC
+inst_CountPC: CountPC port map(
+   clock    => clock,                        -- Señal del clock (reducido).
+   clear    => clear,                        -- Señal de reset.
+   load     => loadPC,                        -- Señal de carga.
+   up       => '1',                        -- Señal de subida.
+   down     => '0',                       -- Señal de bajada.
+   datain   => countPC_in,   -- Señales de entrada de datos.
+   dataout  => rom_address
+);
+                 
+                 
 -- Instancia Control Unit
 
 cu_datain <= rom_dataout(19 downto 0);
@@ -253,16 +264,6 @@ inst_Adder: Adder16 port map(
    s    => adder_out,                        -- Señal de subida.
    co   => adder_co                     -- Señal de bajada.
    );
--- Count PC
-inst_CountPC: CountPC port map(
-   clock    => clock,                        -- Señal del clock (reducido).
-   clear    => clear,                        -- Señal de reset.
-   load     => loadPC,                        -- Señal de carga.
-   up       => '1',                        -- Señal de subida.
-   down     => '0',                       -- Señal de bajada.
-   datain   => countPC_in,   -- Señales de entrada de datos.
-   dataout  => countPC_out
-);
 
 -- SP
 
