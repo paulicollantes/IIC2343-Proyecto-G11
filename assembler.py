@@ -17,7 +17,7 @@ class Assembler:
 
     def save_vars(self, path):
         #Leer txt
-        with open(path, "r") as file:
+        with open(path, "r", encoding="utf-8") as file:
             i = 0
             v = 0
             for line in file:
@@ -37,7 +37,7 @@ class Assembler:
                         nombre = var2[0]
                         var_value , sum_v = self.valor_to_ascii(var2[-1])
                         valor = [] 
-                        valor.append(var_value)
+                        valor += var_value
                         self.variables[nombre] = valor
                         self.pos_variables[nombre] = v
                         v += sum_v
@@ -52,8 +52,7 @@ class Assembler:
     
     def valor_to_ascii(self, var):
         if "\'" in var or "\"" in var:
-            new_var = var.strip("\"")
-            new_var = new_var.strip("\'")
+            new_var = var.strip("\"").strip("\'")
             var_list = list(new_var)
             if len(var_list) > 1:
                 for car in var_list:
@@ -68,7 +67,7 @@ class Assembler:
         return (new_var, sum_var)
 
     def save_code(self, code_start):
-        with open(path, "r") as file:
+        with open(path, "r", encoding="utf-8") as file:
             i = 0
             for line in file:
                 i += 1
@@ -92,14 +91,15 @@ class Assembler:
         for line in self.code:
             line = line.strip()
             if len(line) > 0 and line[-1] == ":":
-                instructions.append(["NOP", "", "", "", ""])
+                pass
+                #instructions.append(["NOP", "", "", "", ""])
             else:
                 inst = line[0:3]
-                arguments = line[3:].split(",")
+                
+                arguments = [l.strip() for l in line[3:].split(",")]
+
                 #print("PRRRRRR, ", line, end="--->")
                 #print(arguments)
-                for l in arguments:
-                    l.strip()
                 arg_1 = arguments[0]
                 type_1, arg_1 = self.clean_arg(arg_1, inst)
                 a1 = self.variables.get(arg_1)
@@ -126,7 +126,7 @@ class Assembler:
                     if l2:
                         arg_2 = self.labels[arg_2] 
                 else:
-                    type_2 = ""
+                    type_2 = "" #Esto es necesario?
                     arg_2 = ""             
                 lineinst = [inst, type_1, type_2, arg_1, arg_2]
                 instructions.append(lineinst)
@@ -139,8 +139,8 @@ class Assembler:
         #print("AAAHHH, ", valor)
         if valor[0] == "(":
             if arg.strip("( )") == "B":
-                valor = "(B)"
-                tipo = "(B)"
+                valor = "(B)" #Esto está mal creo, pero no es el problema
+                tipo = "(B)" 
             else:
                 valor = arg.strip("( )")
                 tipo = "Dir"
@@ -178,9 +178,10 @@ if __name__ == '__main__':
         #print(assembler.labels)
 
         instructions = assembler.separate()
-
-        #for l in instructions:
-        #    print(l)
+        print("Instrucciones :")
+        for l in instructions:
+            print(l)
+        print("Fin instrucciones")
         instInBytes = assembler.instructionsToBytes(instructions)
         #for l in instInBytes:
         #    print(l)
