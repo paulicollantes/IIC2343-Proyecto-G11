@@ -96,7 +96,7 @@ class Assembler:
             else:
                 inst = line[0:3]
                 arguments = line[3:].split(",")
-                print("PRRRRRR, ", line, end="--->")
+                #print("PRRRRRR, ", line, end="--->")
                 #print(arguments)
                 for l in arguments:
                     l.strip()
@@ -136,7 +136,7 @@ class Assembler:
     def clean_arg(self, arg, inst):
         lIns = ["JMP", "JEQ", "JWE", "JGT", "JGE", "JLT", "JLE", "JCR", "CALL"]
         valor = arg.strip()
-        print("AAAHHH, ", valor)
+        #print("AAAHHH, ", valor)
         if valor[0] == "(":
             if arg.strip("( )") == "B":
                 valor = "(B)"
