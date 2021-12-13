@@ -95,7 +95,9 @@ class Assembler:
                 #instructions.append(["NOP", "", "", "", ""])
             else:
                 inst = line[0:3]
+                
                 arguments = [l.strip() for l in line[3:].split(",")]
+
                 #print("PRRRRRR, ", line, end="--->")
                 #print(arguments)
                 arg_1 = arguments[0]
