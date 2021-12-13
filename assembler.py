@@ -17,7 +17,7 @@ class Assembler:
 
     def save_vars(self, path):
         #Leer txt
-        with open(path, "r", encoding="utf-8") as file:
+        with open(path, "r") as file:
             i = 0
             v = 0
             for line in file:
@@ -67,7 +67,7 @@ class Assembler:
         return (new_var, sum_var)
 
     def save_code(self, code_start):
-        with open(path, "r", encoding="utf-8") as file:
+        with open(path, "r") as file:
             i = 0
             for line in file:
                 i += 1
