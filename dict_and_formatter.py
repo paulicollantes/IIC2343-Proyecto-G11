@@ -140,6 +140,7 @@ def formatter(literal=''):
         
 def getWordArray(instruction = 'JMP', type1='', type2='', elemento1='', elemento2=''):
         global DICC
+        print("DICT FORMAT", instruction, type1, type2, elemento1, elemento2    )
         types = ['Lit', 'Ins', 'Dir']
         operands = f'{type1},{type2}'
         opcode = DICC[instruction][operands]
