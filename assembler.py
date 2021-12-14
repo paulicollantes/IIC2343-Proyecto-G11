@@ -17,7 +17,7 @@ class Assembler:
 
     def save_vars(self, path):
         #Leer txt
-        with open(path, "r", encoding="utf-8") as file:
+        with open(path, "r") as file:
             i = 0
             v = 0
             for line in file:
@@ -67,7 +67,7 @@ class Assembler:
         return (new_var, sum_var)
 
     def save_code(self, code_start):
-        with open(path, "r", encoding="utf-8") as file:
+        with open(path, "r") as file:
             i = 0
             for line in file:
                 i += 1
@@ -149,6 +149,9 @@ class Assembler:
             tipo = "B"
         elif inst in lIns:
             tipo = "Ins"
+        elif inst == "RET":
+            tipo = ""
+            valor = ""
         else:
             tipo = "Lit"
         return (tipo, valor)
@@ -177,15 +180,15 @@ if __name__ == '__main__':
         #print(assembler.labels)
 
         instructions = assembler.separate()
-        print("Instrucciones :")
-        for l in instructions:
-            print(l)
-        print("Fin instrucciones")
+        #print("Instrucciones :")
+        #for l in instructions:
+        #    print(l)
+        #print("Fin instrucciones")
         instInBytes = assembler.instructionsToBytes(instructions)
         #for l in instInBytes:
         #    print(l)
-        print(instInBytes)
-        """
+        #print(instInBytes)
+        
         rom_programmer = Basys3()
         print('Puertos:', end=' ')
         for i in rom_programmer.available_ports:
@@ -200,7 +203,7 @@ if __name__ == '__main__':
                 print(line)
                 rom_programmer.write(i, line)
                 i += 1
-        rom_programmer.begin(4) # Colocar acá la posición que le correspondería
+        rom_programmer.begin(2) # Colocar acá la posición que le correspondería
         rom_programmer.end()
-        """
+        
         time.sleep(5)
