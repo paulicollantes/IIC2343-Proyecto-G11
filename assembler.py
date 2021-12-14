@@ -14,6 +14,8 @@ class Assembler:
         self.pos_variables = {}
         self.code = []
         self.labels = {}
+        self.memB = []
+        self.posB = 0
 
     def save_vars(self, path):
         #Leer txt
@@ -126,7 +128,9 @@ class Assembler:
                         arg_2 = self.labels[arg_2] 
                 else:
                     type_2 = "" #Esto es necesario?
-                    arg_2 = ""             
+                    arg_2 = ""
+                if type_1 == "(B)" or type_2 == "(B)":
+                    pass             
                 lineinst = [inst, type_1, type_2, arg_1, arg_2]
                 instructions.append(lineinst)
         return instructions
@@ -192,8 +196,9 @@ if __name__ == '__main__':
         rom_programmer = Basys3()
         print('Puertos:', end=' ')
         for i in rom_programmer.available_ports:
-            print(i.device, end=' -> ') # Revisar admin dispositivos de Win y seleccionar el USB
+            print(i) # Revisar admin dispositivos de Win y seleccionar el USB
         i = 0
+        rom_programmer.begin(2) # Colocar acá la posición que le correspondería
         for line in instInBytes:
             if len(line) > 1:
                 for llave, valor in assembler.labels.items():
@@ -203,7 +208,6 @@ if __name__ == '__main__':
                 print(line)
                 rom_programmer.write(i, line)
                 i += 1
-        rom_programmer.begin(2) # Colocar acá la posición que le correspondería
         rom_programmer.end()
         
-        time.sleep(5)
+        time.sleep(50)
