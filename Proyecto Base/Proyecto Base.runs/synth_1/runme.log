@@ -15,12 +15,12 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 22688 
+INFO: Helper process launched with PID 26680 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 768.109 ; gain = 233.602
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 769.328 ; gain = 235.250
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Basys3' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:17]
-INFO: [Synth 8-3491] module 'CPU' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:7' bound to instance 'inst_CPU' of component 'CPU' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:213]
+INFO: [Synth 8-3491] module 'CPU' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:7' bound to instance 'inst_CPU' of component 'CPU' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:212]
 INFO: [Synth 8-638] synthesizing module 'CPU' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:20]
 INFO: [Synth 8-3491] module 'CountPC' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:7' bound to instance 'inst_CountPC' of component 'CountPC' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:199]
 INFO: [Synth 8-638] synthesizing module 'CountPC' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:17]
@@ -72,26 +72,26 @@ INFO: [Synth 8-3491] module 'Adder16' declared at 'C:/Users/ASUS/Desktop/Arqui/I
 INFO: [Synth 8-256] done synthesizing module 'ALU' (9#1) [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ALU.vhd:14]
 WARNING: [Synth 8-3848] Net countPC_out in module/entity CPU does not have driver. [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:145]
 INFO: [Synth 8-256] done synthesizing module 'CPU' (10#1) [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CPU.vhd:20]
-INFO: [Synth 8-3491] module 'ROM' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:6' bound to instance 'inst_ROM' of component 'ROM' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:227]
+INFO: [Synth 8-3491] module 'ROM' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:6' bound to instance 'inst_ROM' of component 'ROM' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:226]
 INFO: [Synth 8-638] synthesizing module 'ROM' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'ROM' (11#1) [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/ROM.vhd:17]
-INFO: [Synth 8-3491] module 'RAM' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:8' bound to instance 'inst_RAM' of component 'RAM' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:237]
+INFO: [Synth 8-3491] module 'RAM' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:8' bound to instance 'inst_RAM' of component 'RAM' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:236]
 INFO: [Synth 8-638] synthesizing module 'RAM' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:18]
 INFO: [Synth 8-256] done synthesizing module 'RAM' (12#1) [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/RAM.vhd:18]
-INFO: [Synth 8-3491] module 'Clock_Divider' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:7' bound to instance 'inst_Clock_Divider' of component 'Clock_Divider' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:246]
+INFO: [Synth 8-3491] module 'Clock_Divider' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:7' bound to instance 'inst_Clock_Divider' of component 'Clock_Divider' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:245]
 INFO: [Synth 8-638] synthesizing module 'Clock_Divider' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:13]
 INFO: [Synth 8-256] done synthesizing module 'Clock_Divider' (13#1) [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Clock_Divider.vhd:13]
-INFO: [Synth 8-3491] module 'Display_Controller' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:7' bound to instance 'inst_Display_Controller' of component 'Display_Controller' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:253]
+INFO: [Synth 8-3491] module 'Display_Controller' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:7' bound to instance 'inst_Display_Controller' of component 'Display_Controller' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:252]
 INFO: [Synth 8-638] synthesizing module 'Display_Controller' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:19]
 INFO: [Synth 8-256] done synthesizing module 'Display_Controller' (14#1) [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Display_Controller.vhd:19]
-INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer0' of component 'Debouncer' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:264]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer0' of component 'Debouncer' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:263]
 INFO: [Synth 8-638] synthesizing module 'Debouncer' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:14]
 INFO: [Synth 8-256] done synthesizing module 'Debouncer' (15#1) [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:14]
-INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer1' of component 'Debouncer' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:265]
-INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer2' of component 'Debouncer' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:266]
-INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer3' of component 'Debouncer' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:267]
-INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer4' of component 'Debouncer' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:268]
-INFO: [Synth 8-3491] module 'Programmer' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:6' bound to instance 'inst_Programmer' of component 'Programmer' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:271]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer1' of component 'Debouncer' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:264]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer2' of component 'Debouncer' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:265]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer3' of component 'Debouncer' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:266]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Debouncer.vhd:8' bound to instance 'inst_Debouncer4' of component 'Debouncer' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:267]
+INFO: [Synth 8-3491] module 'Programmer' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:6' bound to instance 'inst_Programmer' of component 'Programmer' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Basys3.vhd:270]
 INFO: [Synth 8-638] synthesizing module 'Programmer' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:17]
 INFO: [Synth 8-3491] module 'UART' declared at 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:11' bound to instance 'inst_UART' of component 'UART' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Programmer.vhd:118]
 INFO: [Synth 8-638] synthesizing module 'UART' [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/UART.vhd:37]
@@ -146,7 +146,7 @@ WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[2]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[1]
 WARNING: [Synth 8-3331] design Basys3 has unconnected port sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 843.934 ; gain = 309.426
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 843.254 ; gain = 309.176
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -159,12 +159,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 843.934 ; gain = 309.426
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 843.254 ; gain = 309.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 843.934 ; gain = 309.426
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 843.254 ; gain = 309.176
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 843.934 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 843.254 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -175,31 +175,31 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Basys3_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 947.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 947.430 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 947.000 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 947.430 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 947.000 ; gain = 412.492
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 947.430 ; gain = 413.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 947.000 ; gain = 412.492
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 947.430 ; gain = 413.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 947.000 ; gain = 412.492
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 947.430 ; gain = 413.352
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/CountPC.vhd:26]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.srcs/sources_1/new/Reg.vhd:26]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 947.000 ; gain = 412.492
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 947.430 ; gain = 413.352
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -437,8 +437,8 @@ INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[4]' (FD
 INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[5]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[11]'
 INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[6]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[11]'
 INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[7]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[11]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_Programmer/inst_UART/tx_state_reg[fsm_state] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_Programmer/state_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_Programmer/inst_UART/tx_state_reg[fsm_state] )
 INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[8]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[11]'
 INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[9]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[11]'
 INFO: [Synth 8-3886] merging instance 'inst_CPU/inst_SP/inst_Reg/reg_reg[10]' (FDRE) to 'inst_CPU/inst_SP/inst_Reg/reg_reg[11]'
@@ -457,7 +457,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_Pro
 INFO: [Synth 8-3886] merging instance 'inst_Programmer/inst_UART/tx_state_reg[bits][1]' (FDE) to 'inst_Programmer/inst_UART/tx_state_reg[bits][0]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst_Programmer/inst_UART/tx_state_reg[bits][0] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 947.000 ; gain = 412.492
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 947.430 ; gain = 413.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -496,13 +496,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 947.000 ; gain = 412.492
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 947.430 ; gain = 413.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 947.652 ; gain = 413.145
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 950.281 ; gain = 416.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -529,7 +529,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 970.566 ; gain = 436.059
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 972.852 ; gain = 438.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -553,13 +553,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 976.156 ; gain = 441.648
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 977.746 ; gain = 443.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 976.156 ; gain = 441.648
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 977.746 ; gain = 443.668
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -578,25 +578,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 976.156 ; gain = 441.648
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:00:59 . Memory (MB): peak = 977.746 ; gain = 443.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 976.156 ; gain = 441.648
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:00:59 . Memory (MB): peak = 977.746 ; gain = 443.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 976.156 ; gain = 441.648
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:00:59 . Memory (MB): peak = 977.746 ; gain = 443.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 976.156 ; gain = 441.648
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:00:59 . Memory (MB): peak = 977.746 ; gain = 443.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -614,8 +614,8 @@ Report Cell Usage:
 +------+----------+------+
 |1     |BUFG      |     3|
 |2     |CARRY4    |    27|
-|3     |LUT1      |    23|
-|4     |LUT2      |    94|
+|3     |LUT1      |    24|
+|4     |LUT2      |    93|
 |5     |LUT3      |   153|
 |6     |LUT4      |    83|
 |7     |LUT5      |    96|
@@ -635,31 +635,31 @@ Report Instance Areas:
 +------+--------------------------+-------------------+------+
 |1     |top                       |                   |  1732|
 |2     |  inst_RAM                |RAM                |   360|
-|3     |  inst_CPU                |CPU                |    84|
+|3     |  inst_CPU                |CPU                |    82|
 |4     |    inst_ControlUnit      |Control_Unit       |     2|
 |5     |    inst_CountPC          |CountPC            |    12|
 |6     |    inst_RegA             |Reg                |    27|
 |7     |    inst_RegB             |Reg_0              |    31|
-|8     |    inst_Status           |Status             |    12|
+|8     |    inst_Status           |Status             |    10|
 |9     |  inst_Clock_Divider      |Clock_Divider      |    60|
 |10    |  inst_Display_Controller |Display_Controller |    33|
-|11    |  inst_Programmer         |Programmer         |   279|
+|11    |  inst_Programmer         |Programmer         |   306|
 |12    |    inst_UART             |UART               |    57|
-|13    |  inst_ROM                |ROM                |   882|
+|13    |  inst_ROM                |ROM                |   857|
 +------+--------------------------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 976.156 ; gain = 441.648
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:00:59 . Memory (MB): peak = 977.746 ; gain = 443.668
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 32 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 976.156 ; gain = 338.582
-Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 976.156 ; gain = 441.648
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:00:55 . Memory (MB): peak = 977.746 ; gain = 339.492
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:00:59 . Memory (MB): peak = 977.746 ; gain = 443.668
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 976.156 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 977.746 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 753 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 976.156 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 977.746 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 624 instances were transformed.
   RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 624 instances
@@ -667,10 +667,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 122 Infos, 81 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 976.156 ; gain = 679.301
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 976.156 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:10 . Memory (MB): peak = 977.746 ; gain = 680.168
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 977.746 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/ASUS/Desktop/Arqui/IIC2343-Proyecto-G11/Proyecto Base/Proyecto Base.runs/synth_1/Basys3.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Basys3_utilization_synth.rpt -pb Basys3_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec 13 17:32:21 2021...
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 13 19:08:30 2021...

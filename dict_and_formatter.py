@@ -69,18 +69,21 @@ DICC = {
             "B,(B)": 0x4C,
         },
         "NOT": {
+            "A,": 0x2B,
             "A,A": 0x2B,
             "B,A": 0x2C,
             "Dir,A": 0x2D,
             "(B),A": 0x4D,
         },
         "SHL": {
+            "A,": 0x2E,
             "A,A": 0x2E,
             "B,A": 0x2F,
             "Dir,A": 0x30,
             "(B),A": 0x4E,
         },
         "SHR": {
+            "A,": 0x31,
             "A,A": 0x31,
             "B,A": 0x32,
             "Dir,A": 0x33,
@@ -101,7 +104,7 @@ DICC = {
         },
         "JMP": { "Ins,": 0x3B },
         "JEQ": { "Ins,": 0x3C },
-        "JNE": { "Ins,": 0x3D },
+        "JNE": { "Ins,": 0x3D, "Lit,": 0x3D },
         "JGT": { "Ins,": 0x52 },
         "JGE": { "Ins,": 0x53 },
         "JLT": { "Ins,": 0x54 },
@@ -140,7 +143,7 @@ def formatter(literal=''):
         
 def getWordArray(instruction = 'JMP', type1='', type2='', elemento1='', elemento2=''):
         global DICC
-        print("DICT FORMAT", instruction, type1, type2, elemento1, elemento2    )
+        #print("DICT FORMAT", instruction, type1, type2, elemento1, elemento2    )
         types = ['Lit', 'Ins', 'Dir']
         operands = f'{type1},{type2}'
         opcode = DICC[instruction][operands]
