@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Tue Dec 14 16:32:50 2021
+| Date         : Tue Dec 14 18:08:00 2021
 | Host         : DESKTOP-C10D95D running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file Basys3_clock_utilization_routed.rpt
 | Design       : Basys3
@@ -64,8 +64,8 @@ Table of Contents
 | Source Id | Global Id | Driver Type/Pin | Constraint | Site         | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock | Driver Pin                                       | Net                                              |
 +-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------+--------------------------------------------------+--------------------------------------------------+
 | src0      | g0        | IBUF/O          | IOB_X1Y26  | IOB_X1Y26    | X1Y0         |           1 |               0 |              10.000 | sys_clk_pin  | clk_IBUF_inst/O                                  | clk_IBUF                                         |
-| src1      | g1        | FDRE/Q          | None       | SLICE_X33Y41 | X0Y0         |           1 |               1 |                     |              | inst_Clock_Divider/internal_clock_reg/Q          | inst_Clock_Divider/clock                         |
-| src2      | g2        | FDRE/Q          | None       | SLICE_X33Y52 | X0Y1         |           1 |               1 |                     |              | inst_Programmer/inst_UART/rx_state_reg[enable]/Q | inst_Programmer/inst_UART/rx_state_reg[enable]_0 |
+| src1      | g1        | FDRE/Q          | None       | SLICE_X35Y46 | X0Y0         |           1 |               1 |                     |              | inst_Clock_Divider/internal_clock_reg/Q          | inst_Clock_Divider/clock                         |
+| src2      | g2        | FDRE/Q          | None       | SLICE_X32Y66 | X0Y1         |           1 |               1 |                     |              | inst_Programmer/inst_UART/rx_state_reg[enable]/Q | inst_Programmer/inst_UART/rx_state_reg[enable]_0 |
 +-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------+--------------------------------------------------+--------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -80,9 +80,9 @@ Table of Contents
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   28 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   66 |  1500 |    0 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
-| X0Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   17 |  1200 |    5 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y1              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   86 |  1500 |    0 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   35 |  1500 |    0 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X0Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   17 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y1              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  117 |  1500 |    0 |   450 |    0 |    40 |    0 |    20 |    0 |    20 |
 | X0Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1800 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y2              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |   950 |    0 |   300 |    0 |    10 |    0 |     5 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
@@ -143,8 +143,8 @@ All Modules
 |    | X0 | X1  |
 +----+----+-----+
 | Y2 |  0 |   0 |
-| Y1 |  0 |   1 |
-| Y0 |  0 |  47 |
+| Y1 |  0 |  32 |
+| Y0 |  0 |  16 |
 +----+----+-----+
 
 
@@ -191,7 +191,7 @@ All Modules
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net           |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------+
 | g0        | n/a   | BUFG/O          | None       |          19 |               0 | 19 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG |
-| g1        | n/a   | BUFG/O          | None       |          47 |               0 | 47 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clock_BUFG    |
+| g1        | n/a   | BUFG/O          | None       |          16 |               0 | 16 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clock_BUFG    |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+---------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -218,7 +218,7 @@ All Modules
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                  |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------+
 | g0        | n/a   | BUFG/O          | None       |           9 |               0 |  9 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG        |
-| g1        | n/a   | BUFG/O          | None       |           1 |               0 |  1 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clock_BUFG           |
+| g1        | n/a   | BUFG/O          | None       |          32 |               0 | 32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clock_BUFG           |
 | g2        | n/a   | BUFG/O          | None       |          76 |               0 | 76 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | rx_state_reg[enable] |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------+
 * Clock Loads column represents the clock pin loads (pin count)
