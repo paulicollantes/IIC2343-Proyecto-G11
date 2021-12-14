@@ -14,8 +14,6 @@ class Assembler:
         self.pos_variables = {}
         self.code = []
         self.labels = {}
-        self.memB = []
-        self.posB = 0
 
     def save_vars(self, path):
         #Leer txt
@@ -128,9 +126,7 @@ class Assembler:
                         arg_2 = self.labels[arg_2] 
                 else:
                     type_2 = "" #Esto es necesario?
-                    arg_2 = ""
-                if type_1 == "(B)" or type_2 == "(B)":
-                    pass             
+                    arg_2 = ""          
                 lineinst = [inst, type_1, type_2, arg_1, arg_2]
                 instructions.append(lineinst)
         return instructions
@@ -142,7 +138,7 @@ class Assembler:
         #print("AAAHHH, ", valor)
         if valor[0] == "(":
             if arg.strip("( )") == "B":
-                valor = "(B)" #Esto está mal creo, pero no es el problema
+                valor = "B" #Esto está mal creo, pero no es el problema
                 tipo = "(B)" 
             else:
                 valor = arg.strip("( )")
