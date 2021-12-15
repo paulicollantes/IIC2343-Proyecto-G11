@@ -243,7 +243,7 @@ inst_RAM: RAM port map(
     
  -- Intancia del divisor de la señal del clock.
 inst_Clock_Divider: Clock_Divider port map(
-    speed       => "10",                    -- Selector de velocidad: "00" full, "01" fast, "10" normal y "11" slow. 
+    speed       => "00",                    -- Selector de velocidad: "00" full, "01" fast, "10" normal y "11" slow. 
     clk         => clk,                     -- No Tocar - Entrada de la señal del clock completo (100Mhz).
     clock       => clock                    -- No Tocar - Salida de la señal del clock reducido: 25Mhz, 8hz, 2hz y 0.5hz.
     );
